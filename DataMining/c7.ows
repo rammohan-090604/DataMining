@@ -1,0 +1,997 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme version="2.0" title="Classification" description="The Workflow consists of classification of data. It have the flows of with outliers and without outliers and after discretization and before discretization and so on">
+	<nodes>
+		<node id="0" name="File" qualified_name="Orange.widgets.data.owfile.OWFile" project_name="Orange3" version="" title="File" position="(450, 450)" />
+		<node id="1" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWTable" project_name="Orange3" version="" title="Data Table" position="(600, 300)" />
+		<node id="2" name="Preprocess" qualified_name="Orange.widgets.data.owpreprocess.OWPreprocess" project_name="Orange3" version="" title="Preprocess" position="(900, 450)" />
+		<node id="3" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWTable" project_name="Orange3" version="" title="table after preprocess" position="(1050, 150)" />
+		<node id="4" name="Distances" qualified_name="Orange.widgets.unsupervised.owdistances.OWDistances" project_name="Orange3" version="" title="Distances" position="(3450, 600)" />
+		<node id="5" name="Distance Matrix" qualified_name="Orange.widgets.unsupervised.owdistancematrix.OWDistanceMatrix" project_name="Orange3" version="" title="Distance Matrix" position="(3600, 450)" />
+		<node id="6" name="Hierarchical Clustering" qualified_name="Orange.widgets.unsupervised.owhierarchicalclustering.OWHierarchicalClustering" project_name="Orange3" version="" title="Hierarchical Clustering" position="(3750, 600)" />
+		<node id="7" name="Scatter Plot" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" project_name="Orange3" version="" title="kmeans plot" position="(3900, 900)" />
+		<node id="8" name="k-Means" qualified_name="Orange.widgets.unsupervised.owkmeans.OWKMeans" project_name="Orange3" version="" title="k-Means" position="(3450, 750)" />
+		<node id="9" name="Outliers" qualified_name="Orange.widgets.data.owoutliers.OWOutliers" project_name="Orange3" version="" title="Outliers" position="(1050, 750)" />
+		<node id="10" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWTable" project_name="Orange3" version="" title="inliers" position="(2700, 1200)" />
+		<node id="11" name="Scatter Plot" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" project_name="Orange3" version="" title="hierarichical plot" position="(3900, 600)" />
+		<node id="12" name="Discretize" qualified_name="Orange.widgets.data.owdiscretize.OWDiscretize" project_name="Orange3" version="" title="Discretize" position="(1950, 450)" />
+		<node id="13" name="Predictions" qualified_name="Orange.widgets.evaluate.owpredictions.OWPredictions" project_name="Orange3" version="" title="kmeans pred" position="(3600, 900)" />
+		<node id="14" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Quality of Clusters" position="(3900, 750)" />
+		<node id="15" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Quality of Cluster" position="(3750, 750)" />
+		<node id="16" name="Scatter Plot" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" project_name="Orange3" version="" title="inliers_plot" position="(3000, 1500)" />
+		<node id="17" name="Outliers" qualified_name="Orange.widgets.data.owoutliers.OWOutliers" project_name="Orange3" version="" title="outliers after discretize" position="(3600, 0)" />
+		<node id="18" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWTable" project_name="Orange3" version="" title="outlier table" position="(3750, -150)" />
+		<node id="19" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWTable" project_name="Orange3" version="" title="inliers table" position="(3750, 0)" />
+		<node id="20" name="Distances" qualified_name="Orange.widgets.unsupervised.owdistances.OWDistances" project_name="Orange3" version="" title="Distances" position="(4050, -150)" />
+		<node id="21" name="Hierarchical Clustering" qualified_name="Orange.widgets.unsupervised.owhierarchicalclustering.OWHierarchicalClustering" project_name="Orange3" version="" title="Hierarchical Clustering with inliers" position="(4200, -150)" />
+		<node id="22" name="Scatter Plot" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" project_name="Orange3" version="" title="kmeans plot with inliers" position="(4350, 150)" />
+		<node id="23" name="k-Means" qualified_name="Orange.widgets.unsupervised.owkmeans.OWKMeans" project_name="Orange3" version="" title="k Means with inliers" position="(4050, 0)" />
+		<node id="24" name="Scatter Plot" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" project_name="Orange3" version="" title="hierarichical plot" position="(4350, -300)" />
+		<node id="25" name="Predictions" qualified_name="Orange.widgets.evaluate.owpredictions.OWPredictions" project_name="Orange3" version="" title="kmeans pred with inliers" position="(4200, 150)" />
+		<node id="26" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Quality of Clusters" position="(4350, -150)" />
+		<node id="27" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Quality of Clusters" position="(4200, 0)" />
+		<node id="28" name="Scatter Plot" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" project_name="Orange3" version="" title="outlier plot dis" position="(4050, -300)" />
+		<node id="29" name="Data Info" qualified_name="Orange.widgets.data.owdatainfo.OWDataInfo" project_name="Orange3" version="" title="Data Info" position="(600, 600)" />
+		<node id="30" name="Distances" qualified_name="Orange.widgets.unsupervised.owdistances.OWDistances" project_name="Orange3" version="" title="Distances  " position="(1050, -750)" />
+		<node id="31" name="Hierarchical Clustering" qualified_name="Orange.widgets.unsupervised.owhierarchicalclustering.OWHierarchicalClustering" project_name="Orange3" version="" title="Hierarchical Clustering  with missing values" position="(1200, -900)" />
+		<node id="32" name="Scatter Plot" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" project_name="Orange3" version="" title="Hierarchical Clustering plot" position="(1350, -900)" />
+		<node id="33" name="Discretize" qualified_name="Orange.widgets.data.owdiscretize.OWDiscretize" project_name="Orange3" version="" title="Discretize (1)" position="(900, -750)" />
+		<node id="34" name="k-Means" qualified_name="Orange.widgets.unsupervised.owkmeans.OWKMeans" project_name="Orange3" version="" title="k-Means with missing data" position="(1050, -600)" />
+		<node id="35" name="Scatter Plot" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" project_name="Orange3" version="" title="K-means plot" position="(1200, -450)" />
+		<node id="36" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Quality of Clusters" position="(1350, -1050)" />
+		<node id="37" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Quality of Clusters" position="(1200, -600)" />
+		<node id="38" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWTable" project_name="Orange3" version="" title="outliers" position="(1500, 900)" />
+		<node id="39" name="k-Means" qualified_name="Orange.widgets.unsupervised.owkmeans.OWKMeans" project_name="Orange3" version="" title="k-Means for inliers" position="(3000, 1350)" />
+		<node id="40" name="Scatter Plot" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" project_name="Orange3" version="" title="k-means plot" position="(3150, 1500)" />
+		<node id="41" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Quality of Clusters  " position="(3150, 1350)" />
+		<node id="42" name="Distances" qualified_name="Orange.widgets.unsupervised.owdistances.OWDistances" project_name="Orange3" version="" title="Distances " position="(3000, 1200)" />
+		<node id="43" name="Hierarchical Clustering" qualified_name="Orange.widgets.unsupervised.owhierarchicalclustering.OWHierarchicalClustering" project_name="Orange3" version="" title="Hierarchical Clustering for inliers" position="(3150, 1200)" />
+		<node id="44" name="Scatter Plot" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" project_name="Orange3" version="" title="Hierarichical plot" position="(3300, 1200)" />
+		<node id="45" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Quality of Clusters" position="(3300, 1350)" />
+		<node id="46" name="Distances" qualified_name="Orange.widgets.unsupervised.owdistances.OWDistances" project_name="Orange3" version="" title="Distances" position="(2100, 1650)" />
+		<node id="47" name="Distance Matrix" qualified_name="Orange.widgets.unsupervised.owdistancematrix.OWDistanceMatrix" project_name="Orange3" version="" title="Distance Matrix" position="(2400, 1500)" />
+		<node id="48" name="Hierarchical Clustering" qualified_name="Orange.widgets.unsupervised.owhierarchicalclustering.OWHierarchicalClustering" project_name="Orange3" version="" title="Hierarchical Clustering " position="(2400, 1650)" />
+		<node id="49" name="Scatter Plot" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" project_name="Orange3" version="" title="kmeans plot" position="(2400, 1950)" />
+		<node id="50" name="k-Means" qualified_name="Orange.widgets.unsupervised.owkmeans.OWKMeans" project_name="Orange3" version="" title="k-Means" position="(2100, 1800)" />
+		<node id="51" name="Scatter Plot" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" project_name="Orange3" version="" title="hierarichical plot" position="(2550, 1650)" />
+		<node id="52" name="Predictions" qualified_name="Orange.widgets.evaluate.owpredictions.OWPredictions" project_name="Orange3" version="" title="kmeans pred" position="(2250, 1950)" />
+		<node id="53" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Quality of Clusters" position="(2547.5, 1808.75)" />
+		<node id="54" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Quality of Cluster" position="(2270.0, 1802.5)" />
+		<node id="55" name="Discretize" qualified_name="Orange.widgets.data.owdiscretize.OWDiscretize" project_name="Orange3" version="" title="Discretize " position="(1950, 1650)" />
+		<node id="56" name="Distance Matrix" qualified_name="Orange.widgets.unsupervised.owdistancematrix.OWDistanceMatrix" project_name="Orange3" version="" title="Distance Matrix" position="(4200, -300)" />
+		<node id="57" name="Distance Matrix" qualified_name="Orange.widgets.unsupervised.owdistancematrix.OWDistanceMatrix" project_name="Orange3" version="" title="Distance Matrix" position="(3150, 1050)" />
+		<node id="58" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWTable" project_name="Orange3" version="" title="data table" position="(2550, -450)" />
+		<node id="59" name="k-Means" qualified_name="Orange.widgets.unsupervised.owkmeans.OWKMeans" project_name="Orange3" version="" title="k-Means" position="(2850, -300)" />
+		<node id="60" name="Scatter Plot" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" project_name="Orange3" version="" title="k-means plot" position="(3000, -150)" />
+		<node id="61" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Quality of Clusters" position="(3000, -300)" />
+		<node id="62" name="Distances" qualified_name="Orange.widgets.unsupervised.owdistances.OWDistances" project_name="Orange3" version="" title="Distances " position="(2850, -450)" />
+		<node id="63" name="Hierarchical Clustering" qualified_name="Orange.widgets.unsupervised.owhierarchicalclustering.OWHierarchicalClustering" project_name="Orange3" version="" title="Hierarchical Clustering" position="(3000, -450)" />
+		<node id="64" name="Scatter Plot" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" project_name="Orange3" version="" title="Hierarichical plot" position="(3150, -450)" />
+		<node id="65" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Quality of Clusters" position="(3150, -300)" />
+		<node id="66" name="Distance Matrix" qualified_name="Orange.widgets.unsupervised.owdistancematrix.OWDistanceMatrix" project_name="Orange3" version="" title="Distance Matrix" position="(3000, -600)" />
+		<node id="67" name="Distances" qualified_name="Orange.widgets.unsupervised.owdistances.OWDistances" project_name="Orange3" version="" title="Distances" position="(2100, -1200)" />
+		<node id="68" name="Distance Matrix" qualified_name="Orange.widgets.unsupervised.owdistancematrix.OWDistanceMatrix" project_name="Orange3" version="" title="Distance Matrix " position="(2400, -1350)" />
+		<node id="69" name="Hierarchical Clustering" qualified_name="Orange.widgets.unsupervised.owhierarchicalclustering.OWHierarchicalClustering" project_name="Orange3" version="" title="Hierarchical Clustering " position="(2400, -1200)" />
+		<node id="70" name="Scatter Plot" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" project_name="Orange3" version="" title="kmeans plot" position="(2400, -900)" />
+		<node id="71" name="k-Means" qualified_name="Orange.widgets.unsupervised.owkmeans.OWKMeans" project_name="Orange3" version="" title="k-Means (1)" position="(2100, -1050)" />
+		<node id="72" name="Scatter Plot" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" project_name="Orange3" version="" title="hierarichical plot" position="(2550, -1200)" />
+		<node id="73" name="Predictions" qualified_name="Orange.widgets.evaluate.owpredictions.OWPredictions" project_name="Orange3" version="" title="kmeans pred" position="(2250, -900)" />
+		<node id="74" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Quality of Clusters" position="(2550, -1050)" />
+		<node id="75" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Quality of Cluster" position="(2250, -1050)" />
+		<node id="76" name="Discretize" qualified_name="Orange.widgets.data.owdiscretize.OWDiscretize" project_name="Orange3" version="" title="Discretize" position="(1950, -1200)" />
+		<node id="77" name="Distances" qualified_name="Orange.widgets.unsupervised.owdistances.OWDistances" project_name="Orange3" version="" title="Distances   (1)" position="(900, 1650)" />
+		<node id="78" name="Hierarchical Clustering" qualified_name="Orange.widgets.unsupervised.owhierarchicalclustering.OWHierarchicalClustering" project_name="Orange3" version="" title="Hierarchical Clustering  with missing values (1)" position="(1050, 1500)" />
+		<node id="79" name="Scatter Plot" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" project_name="Orange3" version="" title="Hierarchical Clustering plot (1)" position="(1200, 1500)" />
+		<node id="80" name="k-Means" qualified_name="Orange.widgets.unsupervised.owkmeans.OWKMeans" project_name="Orange3" version="" title="k-Means with missing data (1)" position="(900, 1800)" />
+		<node id="81" name="Scatter Plot" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" project_name="Orange3" version="" title="K-means plot (1)" position="(1050, 1950)" />
+		<node id="82" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Quality of Clusters (1)" position="(1200, 1350)" />
+		<node id="83" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Quality of Clusters (1)" position="(1050, 1800)" />
+		<node id="84" name="Data Table" qualified_name="Orange.widgets.data.owtable.OWTable" project_name="Orange3" version="" title="Data Table (1)" position="(750, 1500)" />
+		<node id="85" name="Scatter Plot" qualified_name="Orange.widgets.visualize.owscatterplot.OWScatterPlot" project_name="Orange3" version="" title="Scatter Plot" position="(1679.0, 1042.0)" />
+	</nodes>
+	<links>
+		<link id="0" source_node_id="0" sink_node_id="1" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="1" source_node_id="0" sink_node_id="2" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="2" source_node_id="4" sink_node_id="5" source_channel="Distances" sink_channel="Distances" enabled="true" source_channel_id="distances" sink_channel_id="distances" />
+		<link id="3" source_node_id="4" sink_node_id="6" source_channel="Distances" sink_channel="Distances" enabled="true" source_channel_id="distances" sink_channel_id="distances" />
+		<link id="4" source_node_id="2" sink_node_id="9" source_channel="Preprocessed Data" sink_channel="Data" enabled="true" source_channel_id="preprocessed_data" sink_channel_id="data" />
+		<link id="5" source_node_id="6" sink_node_id="11" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="6" source_node_id="2" sink_node_id="12" source_channel="Preprocessed Data" sink_channel="Data" enabled="true" source_channel_id="preprocessed_data" sink_channel_id="data" />
+		<link id="7" source_node_id="12" sink_node_id="4" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="8" source_node_id="2" sink_node_id="3" source_channel="Preprocessed Data" sink_channel="Data" enabled="true" source_channel_id="preprocessed_data" sink_channel_id="data" />
+		<link id="9" source_node_id="12" sink_node_id="8" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="10" source_node_id="8" sink_node_id="13" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="11" source_node_id="8" sink_node_id="7" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="12" source_node_id="6" sink_node_id="14" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="13" source_node_id="8" sink_node_id="15" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="14" source_node_id="12" sink_node_id="17" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="15" source_node_id="17" sink_node_id="18" source_channel="Outliers" sink_channel="Data" enabled="true" source_channel_id="outliers" sink_channel_id="data" />
+		<link id="16" source_node_id="17" sink_node_id="19" source_channel="Inliers" sink_channel="Data" enabled="true" source_channel_id="inliers" sink_channel_id="data" />
+		<link id="17" source_node_id="20" sink_node_id="21" source_channel="Distances" sink_channel="Distances" enabled="true" source_channel_id="distances" sink_channel_id="distances" />
+		<link id="18" source_node_id="21" sink_node_id="24" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="19" source_node_id="23" sink_node_id="25" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="20" source_node_id="23" sink_node_id="22" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="21" source_node_id="21" sink_node_id="26" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="22" source_node_id="23" sink_node_id="27" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="23" source_node_id="19" sink_node_id="20" source_channel="Selected Data" sink_channel="Data" enabled="true" source_channel_id="selected_data" sink_channel_id="data" />
+		<link id="24" source_node_id="19" sink_node_id="23" source_channel="Selected Data" sink_channel="Data" enabled="true" source_channel_id="selected_data" sink_channel_id="data" />
+		<link id="25" source_node_id="18" sink_node_id="28" source_channel="Selected Data" sink_channel="Data" enabled="true" source_channel_id="selected_data" sink_channel_id="data" />
+		<link id="26" source_node_id="30" sink_node_id="31" source_channel="Distances" sink_channel="Distances" enabled="true" source_channel_id="distances" sink_channel_id="distances" />
+		<link id="27" source_node_id="0" sink_node_id="33" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="28" source_node_id="33" sink_node_id="30" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="29" source_node_id="34" sink_node_id="35" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="30" source_node_id="31" sink_node_id="32" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="31" source_node_id="31" sink_node_id="36" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="32" source_node_id="34" sink_node_id="37" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="33" source_node_id="9" sink_node_id="38" source_channel="Outliers" sink_channel="Data" enabled="true" source_channel_id="outliers" sink_channel_id="data" />
+		<link id="34" source_node_id="9" sink_node_id="10" source_channel="Inliers" sink_channel="Data" enabled="true" source_channel_id="inliers" sink_channel_id="data" />
+		<link id="35" source_node_id="10" sink_node_id="16" source_channel="Selected Data" sink_channel="Data" enabled="true" source_channel_id="selected_data" sink_channel_id="data" />
+		<link id="36" source_node_id="10" sink_node_id="39" source_channel="Selected Data" sink_channel="Data" enabled="true" source_channel_id="selected_data" sink_channel_id="data" />
+		<link id="37" source_node_id="39" sink_node_id="40" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="38" source_node_id="39" sink_node_id="41" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="39" source_node_id="10" sink_node_id="42" source_channel="Selected Data" sink_channel="Data" enabled="true" source_channel_id="selected_data" sink_channel_id="data" />
+		<link id="40" source_node_id="42" sink_node_id="43" source_channel="Distances" sink_channel="Distances" enabled="true" source_channel_id="distances" sink_channel_id="distances" />
+		<link id="41" source_node_id="43" sink_node_id="44" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="42" source_node_id="43" sink_node_id="45" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="43" source_node_id="33" sink_node_id="34" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="44" source_node_id="0" sink_node_id="29" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="45" source_node_id="46" sink_node_id="47" source_channel="Distances" sink_channel="Distances" enabled="true" source_channel_id="distances" sink_channel_id="distances" />
+		<link id="46" source_node_id="46" sink_node_id="48" source_channel="Distances" sink_channel="Distances" enabled="true" source_channel_id="distances" sink_channel_id="distances" />
+		<link id="47" source_node_id="48" sink_node_id="51" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="48" source_node_id="50" sink_node_id="52" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="49" source_node_id="50" sink_node_id="49" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="50" source_node_id="48" sink_node_id="53" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="51" source_node_id="50" sink_node_id="54" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="52" source_node_id="55" sink_node_id="46" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="53" source_node_id="55" sink_node_id="50" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="54" source_node_id="9" sink_node_id="55" source_channel="Inliers" sink_channel="Data" enabled="true" source_channel_id="inliers" sink_channel_id="data" />
+		<link id="55" source_node_id="20" sink_node_id="56" source_channel="Distances" sink_channel="Distances" enabled="true" source_channel_id="distances" sink_channel_id="distances" />
+		<link id="56" source_node_id="42" sink_node_id="57" source_channel="Distances" sink_channel="Distances" enabled="true" source_channel_id="distances" sink_channel_id="distances" />
+		<link id="57" source_node_id="58" sink_node_id="59" source_channel="Selected Data" sink_channel="Data" enabled="true" source_channel_id="selected_data" sink_channel_id="data" />
+		<link id="58" source_node_id="59" sink_node_id="60" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="59" source_node_id="59" sink_node_id="61" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="60" source_node_id="58" sink_node_id="62" source_channel="Selected Data" sink_channel="Data" enabled="true" source_channel_id="selected_data" sink_channel_id="data" />
+		<link id="61" source_node_id="62" sink_node_id="63" source_channel="Distances" sink_channel="Distances" enabled="true" source_channel_id="distances" sink_channel_id="distances" />
+		<link id="62" source_node_id="63" sink_node_id="64" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="63" source_node_id="63" sink_node_id="65" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="64" source_node_id="62" sink_node_id="66" source_channel="Distances" sink_channel="Distances" enabled="true" source_channel_id="distances" sink_channel_id="distances" />
+		<link id="65" source_node_id="2" sink_node_id="58" source_channel="Preprocessed Data" sink_channel="Data" enabled="true" source_channel_id="preprocessed_data" sink_channel_id="data" />
+		<link id="66" source_node_id="67" sink_node_id="68" source_channel="Distances" sink_channel="Distances" enabled="true" source_channel_id="distances" sink_channel_id="distances" />
+		<link id="67" source_node_id="67" sink_node_id="69" source_channel="Distances" sink_channel="Distances" enabled="true" source_channel_id="distances" sink_channel_id="distances" />
+		<link id="68" source_node_id="69" sink_node_id="72" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="69" source_node_id="71" sink_node_id="73" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="70" source_node_id="71" sink_node_id="70" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="71" source_node_id="69" sink_node_id="74" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="72" source_node_id="71" sink_node_id="75" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="73" source_node_id="76" sink_node_id="67" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="74" source_node_id="76" sink_node_id="71" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="75" source_node_id="2" sink_node_id="76" source_channel="Preprocessed Data" sink_channel="Data" enabled="true" source_channel_id="preprocessed_data" sink_channel_id="data" />
+		<link id="76" source_node_id="77" sink_node_id="78" source_channel="Distances" sink_channel="Distances" enabled="true" source_channel_id="distances" sink_channel_id="distances" />
+		<link id="77" source_node_id="80" sink_node_id="81" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="78" source_node_id="78" sink_node_id="79" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="79" source_node_id="78" sink_node_id="82" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="80" source_node_id="80" sink_node_id="83" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="81" source_node_id="0" sink_node_id="84" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="data" sink_channel_id="data" />
+		<link id="82" source_node_id="84" sink_node_id="77" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="83" source_node_id="84" sink_node_id="80" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+		<link id="84" source_node_id="38" sink_node_id="85" source_channel="Data" sink_channel="Data" enabled="true" source_channel_id="annotated_data" sink_channel_id="data" />
+	</links>
+	<annotations>
+		<text id="0" type="text/markdown" rect="(4047.809523809524, 244.71428571428555, 273.3333333333335, 145.33333333333331)" font-family="MS Shell Dlg 2" font-size="16">## With Discretization and Without Outliers</text>
+		<text id="1" type="text/markdown" rect="(3613.5000000000005, 998.4166666666667, 330.0, 113.33333333333348)" font-family="MS Shell Dlg 2" font-size="16">## With Discretization and With Outliers</text>
+		<text id="2" type="text/markdown" rect="(2218.166666666667, 2028.0833333333335, 322.6666666666665, 98.0)" font-family="MS Shell Dlg 2" font-size="16">## Without Outliers and With Discretization</text>
+		<text id="3" type="text/markdown" rect="(2954.833333333334, 1564.1666666666665, 348.3333333333344, 128.0)" font-family="MS Shell Dlg 2" font-size="16">## Without Outlier and Without Discretization</text>
+		<text id="4" type="text/markdown" rect="(2195.396825396825, -767.6190476190477, 291.42857142857156, 99.0)" font-family="MS Shell Dlg 2" font-size="16">## With Discritization and With Outliers</text>
+		<text id="5" type="text/markdown" rect="(997.9166666666667, -366.6666666666668, 305.0, 75.0)" font-family="MS Shell Dlg 2" font-size="16">## Without Preprocessing</text>
+		<text id="6" type="text/markdown" rect="(2814.642857142857, -65.7142857142857, 328.8333333333335, 131.33333333333331)" font-family="MS Shell Dlg 2" font-size="16">## Without Discretization and With Outliers</text>
+		<text id="7" type="text/markdown" rect="(878.3333333333333, 2018.3333333333335, 306.66666666666663, 55.0)" font-family="MS Shell Dlg 2" font-size="16">## Without Discretization</text>
+	</annotations>
+	<thumbnail />
+	<node_properties>
+		<properties node_id="0" format="pickle">gASV4gcAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjAxyZWNlbnRfcGF0aHOUXZQojB5v
+cmFuZ2V3aWRnZXQudXRpbHMuZmlsZWRpYWxvZ3OUjApSZWNlbnRQYXRolJOUKYGUfZQojAdhYnNw
+YXRolIwtQzovVXNlcnMvbnVuZXIvT25lRHJpdmUvRGVza3RvcC9jN19mbGFyZTIudGFilIwGcHJl
+Zml4lIwHYmFzZWRpcpSMB3JlbHBhdGiUjA1jN19mbGFyZTIudGFilIwFdGl0bGWUjACUjAVzaGVl
+dJRoEIwLZmlsZV9mb3JtYXSUTnViaAYpgZR9lChoCYxXQzovVXNlcnMvbnVuZXIvQXBwRGF0YS9M
+b2NhbC9Qcm9ncmFtcy9PcmFuZ2UvTGliL3NpdGUtcGFja2FnZXMvT3JhbmdlL2RhdGFzZXRzL2ly
+aXMudGFilGgLjA9zYW1wbGUtZGF0YXNldHOUaA2MCGlyaXMudGFilGgPaBBoEWgQaBJOdWJoBimB
+lH2UKGgJjFpDOi9Vc2Vycy9udW5lci9BcHBEYXRhL0xvY2FsL1Byb2dyYW1zL09yYW5nZS9MaWIv
+c2l0ZS1wYWNrYWdlcy9PcmFuZ2UvZGF0YXNldHMvdGl0YW5pYy50YWKUaAtoFmgNjAt0aXRhbmlj
+LnRhYpRoD2gQaBFoEGgSTnViaAYpgZR9lChoCYxaQzovVXNlcnMvbnVuZXIvQXBwRGF0YS9Mb2Nh
+bC9Qcm9ncmFtcy9PcmFuZ2UvTGliL3NpdGUtcGFja2FnZXMvT3JhbmdlL2RhdGFzZXRzL2hvdXNp
+bmcudGFilGgLaBZoDYwLaG91c2luZy50YWKUaA9oEGgRaBBoEk51YmgGKYGUfZQoaAmMYEM6L1Vz
+ZXJzL251bmVyL0FwcERhdGEvTG9jYWwvUHJvZ3JhbXMvT3JhbmdlL0xpYi9zaXRlLXBhY2thZ2Vz
+L09yYW5nZS9kYXRhc2V0cy9oZWFydF9kaXNlYXNlLnRhYpRoC2gWaA2MEWhlYXJ0X2Rpc2Vhc2Uu
+dGFilGgPaBBoEWgQaBJOdWJoBimBlH2UKGgJjGFDOi9Vc2Vycy9udW5lci9BcHBEYXRhL0xvY2Fs
+L1Byb2dyYW1zL09yYW5nZS9MaWIvc2l0ZS1wYWNrYWdlcy9PcmFuZ2UvZGF0YXNldHMvYnJvd24t
+c2VsZWN0ZWQudGFilGgLaBZoDYwSYnJvd24tc2VsZWN0ZWQudGFilGgPaBBoEWgQaBJOdWJoBimB
+lH2UKGgJjFZDOi9Vc2Vycy9udW5lci9BcHBEYXRhL0xvY2FsL1Byb2dyYW1zL09yYW5nZS9MaWIv
+c2l0ZS1wYWNrYWdlcy9PcmFuZ2UvZGF0YXNldHMvem9vLnRhYpRoC2gWaA2MB3pvby50YWKUaA9o
+EGgRaBBoEk51YmWMC3JlY2VudF91cmxzlF2UjBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywAD
+AAAAAAJZAAAAmQAABLIAAALdAAACWgAAALcAAASxAAAC3AAAAAAAAAAABgAAAAJaAAAAtwAABLEA
+AALclIwLc2hlZXRfbmFtZXOUfZSMBnNvdXJjZZRLAIwDdXJslGgQjA1kb21haW5fZWRpdG9ylH2U
+jAtfX3ZlcnNpb25fX5RLAYwQY29udGV4dF9zZXR0aW5nc5RdlIwVb3Jhbmdld2lkZ2V0LnNldHRp
+bmdzlIwHQ29udGV4dJSTlCmBlH2UKIwGdmFsdWVzlH2UKIwJdmFyaWFibGVzlF2UaDR9lGhAXZQo
+XZQojAhzdXJ2aXZhbJSMFE9yYW5nZS5kYXRhLnZhcmlhYmxllIwSQ29udGludW91c1ZhcmlhYmxl
+lJOUSwBoEIhlXZQojAtzdGlsbF9hbGl2ZZRoRowQRGlzY3JldGVWYXJpYWJsZZSTlEsAjAQwLCAx
+lIhlXZQojBNhZ2VfYXRfaGVhcnRfYXR0YWNrlGhISwBoEIhlXZQojBFwZXJpY2FyZF9lZmZ1c2lv
+bpRoTEsAjAQwLCAxlIhlXZQojBBmcmFjdF9zaG9ydGVuaW5nlGhISwBoEIhlXZQojARlcHNzlGhI
+SwBoEIhlXZQojARsdmRklGhISwBoEIhlXZQojBF3YWxsX21vdGlvbl9zY29yZZRoSEsAaBCIZV2U
+KIwRd2FsbF9tb3Rpb25faW5kZXiUaEhLAGgQiGVdlCiMBG11bHSUaEhLAGgQiGVdlCiMCmFsaXZl
+X2F0XzGUaExLAIwEMCwgMZSIZWVzaDZLAXWMCmF0dHJpYnV0ZXOUKIwIc3Vydml2YWyUSwKGlIwL
+c3RpbGxfYWxpdmWUXZQojAEwlIwBMZRlhpSME2FnZV9hdF9oZWFydF9hdHRhY2uUSwKGlIwRcGVy
+aWNhcmRfZWZmdXNpb26UXZQoaGdoaGWGlIwQZnJhY3Rfc2hvcnRlbmluZ5RLAoaUjARlcHNzlEsC
+hpSMBGx2ZGSUSwKGlIwRd2FsbF9tb3Rpb25fc2NvcmWUSwKGlIwRd2FsbF9tb3Rpb25faW5kZXiU
+SwKGlIwEbXVsdJRLAoaUjAphbGl2ZV9hdF8xlF2UKGhnaGhlhpR0lIwFbWV0YXOUKYwKY2xhc3Nf
+dmFyc5QpjBJtb2RpZmllZF92YXJpYWJsZXOUXZR1YmF1Lg==
+</properties>
+		<properties node_id="1" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\xff\xff\xff\xff\xff\xff\xff\xf9\x00\x00\x06\x00\x00\x00\x03`\x00\x00\x00\x00\x00\x00\x00\x17\x00\x00\x05\xff\x00\x00\x03_\x00\x00\x00\x00\x02\x00\x00\x00\x06\x00\x00\x00\x00\x00\x00\x00\x00\x17\x00\x00\x05\xff\x00\x00\x03_', 'select_rows': True, 'show_attribute_labels': True, 'show_distributions': False, 'stored_selection': {'rows': [50], 'columns': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}, 'stored_sort': [], '__version__': 1}</properties>
+		<properties node_id="2" format="literal">{'autocommit': True, 'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01Z\x00\x00\x00\x98\x00\x00\x04\xa5\x00\x00\x02\xaa\x00\x00\x01[\x00\x00\x00\xb6\x00\x00\x04\xa4\x00\x00\x02\xa9\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01[\x00\x00\x00\xb6\x00\x00\x04\xa4\x00\x00\x02\xa9', 'storedsettings': {'name': '', 'preprocessors': [('orange.preprocess.impute', {'method': 2})]}, '__version__': 2}</properties>
+		<properties node_id="3" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\xff\xff\xff\xff\xff\xff\xff\xf9\x00\x00\x06\x00\x00\x00\x03`\x00\x00\x00\x00\x00\x00\x00\x17\x00\x00\x05\xff\x00\x00\x03_\x00\x00\x00\x00\x02\x00\x00\x00\x06\x00\x00\x00\x00\x00\x00\x00\x00\x17\x00\x00\x05\xff\x00\x00\x03_', 'select_rows': True, 'show_attribute_labels': True, 'show_distributions': False, 'stored_selection': {'rows': [101], 'columns': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}, 'stored_sort': [], '__version__': 1}</properties>
+		<properties node_id="4" format="literal">{'autocommit': True, 'axis': 0, 'controlAreaVisible': True, 'metric_id': 1, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02p\x00\x00\x01\x0c\x00\x00\x03\x8f\x00\x00\x026\x00\x00\x02q\x00\x00\x01*\x00\x00\x03\x8e\x00\x00\x025\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x02q\x00\x00\x01*\x00\x00\x03\x8e\x00\x00\x025', '__version__': 4}</properties>
+		<properties node_id="5" format="pickle">gASV2AIAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZl
+ZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAAFvAAAAgAAABJAAAAKSAAABcAAAAJ4AAASPAAAC
+kQAAAAAAAAAABgAAAAFwAAAAngAABI8AAAKRlIwLX192ZXJzaW9uX1+USwKMEGNvbnRleHRfc2V0
+dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1
+ZXOUfZRoBUsCc4wFc2hhcGWUS4RLhIaUjAlzeW1tZXRyaWOUiIwLYW5ub3RhdGlvbnOUXZQojARO
+b25llIwJRW51bWVyYXRllIwIc3Vydml2YWyUjAtzdGlsbF9hbGl2ZZSME2FnZV9hdF9oZWFydF9h
+dHRhY2uUjBFwZXJpY2FyZF9lZmZ1c2lvbpSMEGZyYWN0X3Nob3J0ZW5pbmeUjARlcHNzlIwEbHZk
+ZJSMEXdhbGxfbW90aW9uX3Njb3JllIwRd2FsbF9tb3Rpb25faW5kZXiUjARtdWx0lIwKYWxpdmVf
+YXRfMZRljAphbm5vdGF0aW9ulIwJRW51bWVyYXRllIwJc2VsZWN0aW9ulF2UdWJoCimBlH2UKGgN
+fZRoBUsCc2gPSz1LPYaUaBGIaBJdlCiMBE5vbmWUjAlFbnVtZXJhdGWUjAhzdXJ2aXZhbJSMC3N0
+aWxsX2FsaXZllIwTYWdlX2F0X2hlYXJ0X2F0dGFja5SMEXBlcmljYXJkX2VmZnVzaW9ulIwQZnJh
+Y3Rfc2hvcnRlbmluZ5SMBGVwc3OUjARsdmRklIwRd2FsbF9tb3Rpb25fc2NvcmWUjBF3YWxsX21v
+dGlvbl9pbmRleJSMBG11bHSUjAphbGl2ZV9hdF8xlGVoIYwJRW51bWVyYXRllGgjXZR1YmV1Lg==
+</properties>
+		<properties node_id="6" format="pickle">gASVKwMAAAAAAAB9lCiMF2Fubm90YXRpb25faWZfZW51bWVyYXRllIwLRW51bWVyYXRpb26UjBNh
+bm5vdGF0aW9uX2lmX25hbWVzlIwETmFtZZSMCmF1dG9jb21taXSUiIwSY29udHJvbEFyZWFWaXNp
+YmxllIiMCWN1dF9yYXRpb5RHQFLAAAAAAACMEWxhYmVsX29ubHlfc3Vic2V0lImMB2xpbmthZ2WU
+SwSMCW1heF9kZXB0aJRLCowHcHJ1bmluZ5RLAIwTc2F2ZWRXaWRnZXRHZW9tZXRyeZRDQgHZ0MsA
+AwAAAAABkgAAAIAAAARtAAACkgAAAZMAAACeAAAEbAAAApEAAAAAAAAAAAYAAAABkwAAAJ4AAARs
+AAACkZSMEHNlbGVjdGlvbl9tZXRob2SUSwCMBXRvcF9ulEsDjAt6b29tX2ZhY3RvcpRLAIwLX192
+ZXJzaW9uX1+USwKMFF9fc2Vzc2lvbl9zdGF0ZV9kYXRhlH2UjAd2ZXJzaW9ulEsASwBLAIeUc4wQ
+Y29udGV4dF9zZXR0aW5nc5RdlCiMFW9yYW5nZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5Qp
+gZR9lCiMBnZhbHVlc5R9lCiMCmFubm90YXRpb26UjAhzdXJ2aXZhbJRLZYaUjAhjb2xvcl9ieZRO
+Sv7///+GlGgRSwJ1jAphdHRyaWJ1dGVzlH2UKGggSwGMC3N0aWxsX2FsaXZllEsBjBNhZ2VfYXRf
+aGVhcnRfYXR0YWNrlEsBjBFwZXJpY2FyZF9lZmZ1c2lvbpRLAYwQZnJhY3Rfc2hvcnRlbmluZ5RL
+AYwEZXBzc5RLAYwEbHZkZJRLAYwRd2FsbF9tb3Rpb25fc2NvcmWUSwGMEXdhbGxfbW90aW9uX2lu
+ZGV4lEsBjARtdWx0lEsBjAphbGl2ZV9hdF8xlEsBdYwFbWV0YXOUfZR1YmgaKYGUfZQoaB19lCho
+H2gpS2aGlGgiTkr+////hpRoEUsCdWgkfZQoaCBLAmgmSwFoJ0sCaChLAWgpSwJoKksCaCtLAmgs
+SwJoLUsCaC5LAmgvSwF1aDB9lHViZXUu
+</properties>
+		<properties node_id="7" format="pickle">gASVqAQAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMC2F1dG9fc2FtcGxllIiMEmNvbnRyb2xBcmVh
+VmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAAGbAAAAqwAABO4AAALj
+AAABnAAAAMkAAATtAAAC4gAAAAAAAAAABgAAAAGcAAAAyQAABO0AAALilIwJc2VsZWN0aW9ulE6M
+EXRvb2x0aXBfc2hvd3NfYWxslIiMD3Zpc3VhbF9zZXR0aW5nc5R9lIwFZ3JhcGiUfZQojAthbHBo
+YV92YWx1ZZRLaIwNY2xhc3NfZGVuc2l0eZSIjBFqaXR0ZXJfY29udGludW91c5SJjAtqaXR0ZXJf
+c2l6ZZRLCowTbGFiZWxfb25seV9zZWxlY3RlZJSJjBZvcnRob25vcm1hbF9yZWdyZXNzaW9ulImM
+C3BvaW50X3dpZHRolEsQjAlzaG93X2dyaWSUiYwLc2hvd19sZWdlbmSUiIwNc2hvd19yZWdfbGlu
+ZZSJdYwLX192ZXJzaW9uX1+USwWMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQu
+c2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojAphdHRyX2NvbG9ylIwHQ2x1
+c3RlcpRLZYaUjAphdHRyX2xhYmVslE5K/v///4aUjAphdHRyX3NoYXBllE5K/v///4aUjAlhdHRy
+X3NpemWUTkr+////hpSMBmF0dHJfeJRoIUtlhpSMBmF0dHJfeZRoIUtlhpRoCn2UaBZLBXWMCmF0
+dHJpYnV0ZXOUfZQojAhzdXJ2aXZhbJRLAYwLc3RpbGxfYWxpdmWUSwGME2FnZV9hdF9oZWFydF9h
+dHRhY2uUSwGMEXBlcmljYXJkX2VmZnVzaW9ulEsBjBBmcmFjdF9zaG9ydGVuaW5nlEsBjARlcHNz
+lEsBjARsdmRklEsBjBF3YWxsX21vdGlvbl9zY29yZZRLAYwRd2FsbF9tb3Rpb25faW5kZXiUSwGM
+BG11bHSUSwGMCmFsaXZlX2F0XzGUSwF1jAVtZXRhc5R9lCiMB0NsdXN0ZXKUSwGMClNpbGhvdWV0
+dGWUSwJ1dWJoGymBlH2UKGgefZQojAphdHRyX2NvbG9ylGgxS2WGlIwKYXR0cl9sYWJlbJROSv7/
+//+GlIwKYXR0cl9zaGFwZZROSv7///+GlIwJYXR0cl9zaXpllE5K/v///4aUjAZhdHRyX3iUaDFL
+ZYaUjAZhdHRyX3mUaDZLZYaUjAVncmFwaJR9lGgWSwV1aC59lChoMEsBaDFLAWgySwFoM0sBaDRL
+AWg1SwFoNksBaDdLAWg4SwFoOUsBaDpLAXVoO32UdWJoGymBlH2UKGgefZQoaEJoPUtlhpRoRE5K
+/v///4aUaEZOSv7///+GlGhITkr+////hpRoSmg9S2WGlGhMaD1LZYaUaE59lGgWSwV1aC59lCho
+MEsCaDFLAWgySwJoM0sBaDRLAmg1SwJoNksCaDdLAmg4SwJoOUsCaDpLAXVoO32UKGg9SwFoPksC
+dXViZXUu
+</properties>
+		<properties node_id="8" format="literal">{'auto_commit': True, 'controlAreaVisible': True, 'k': 5, 'k_from': 2, 'k_to': 13, 'max_iterations': 100, 'n_init': 15, 'normalize': True, 'optimize_k': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\x91\x00\x00\x00\xa8\x00\x00\x03Q\x00\x00\x01\xd7\x00\x00\x01\x92\x00\x00\x00\xc6\x00\x00\x03P\x00\x00\x01\xd6\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01\x92\x00\x00\x00\xc6\x00\x00\x03P\x00\x00\x01\xd6', 'selection': 0, 'smart_init': 0, '__version__': 2}</properties>
+		<properties node_id="9" format="literal">{'auto_commit': True, 'controlAreaVisible': True, 'outlier_method': 2, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02^\x00\x00\x01\x10\x00\x00\x03\xa1\x00\x00\x02\x02\x00\x00\x02_\x00\x00\x01.\x00\x00\x03\xa0\x00\x00\x02\x01\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x02_\x00\x00\x01.\x00\x00\x03\xa0\x00\x00\x02\x01', 'cov_editor': {'cont': 10, 'empirical_covariance': False, 'support_fraction': 1}, 'isf_editor': {'cont': 10, 'replicable': False}, 'lof_editor': {'cont': 10, 'metric_index': 0, 'n_neighbors': 20}, 'svm_editor': {'gamma': 0.01, 'nu': 50}, '__version__': 2}</properties>
+		<properties node_id="10" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00\xef\x00\x00\x00B\x00\x00\x04\x10\x00\x00\x02@\x00\x00\x00\xf0\x00\x00\x00`\x00\x00\x04\x0f\x00\x00\x02?\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x00\xf0\x00\x00\x00`\x00\x00\x04\x0f\x00\x00\x02?', 'select_rows': True, 'show_attribute_labels': True, 'show_distributions': False, 'stored_selection': {'rows': [], 'columns': []}, 'stored_sort': [], '__version__': 1}</properties>
+		<properties node_id="11" format="pickle">gASVIQQAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMC2F1dG9fc2FtcGxllIiMEmNvbnRyb2xBcmVh
+VmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAD/////////+QAABgAAAANg
+AAAAAAAAABcAAAX/AAADXwAAAAACAAAABgAAAAAAAAAAFwAABf8AAANflIwJc2VsZWN0aW9ulE6M
+EXRvb2x0aXBfc2hvd3NfYWxslIiMD3Zpc3VhbF9zZXR0aW5nc5R9lIwFZ3JhcGiUfZQojAthbHBo
+YV92YWx1ZZRLgIwNY2xhc3NfZGVuc2l0eZSIjBFqaXR0ZXJfY29udGludW91c5SJjAtqaXR0ZXJf
+c2l6ZZRLCowTbGFiZWxfb25seV9zZWxlY3RlZJSIjBZvcnRob25vcm1hbF9yZWdyZXNzaW9ulImM
+C3BvaW50X3dpZHRolEsHjAlzaG93X2dyaWSUiIwLc2hvd19sZWdlbmSUiIwNc2hvd19yZWdfbGlu
+ZZSJdYwLX192ZXJzaW9uX1+USwWMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQu
+c2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojAphdHRyX2NvbG9ylIwIc3Vy
+dml2YWyUS2WGlIwKYXR0cl9sYWJlbJROSv7///+GlIwKYXR0cl9zaGFwZZROSv7///+GlIwJYXR0
+cl9zaXpllE5K/v///4aUjAZhdHRyX3iUaCFLZYaUjAZhdHRyX3mUjBF3YWxsX21vdGlvbl9pbmRl
+eJRLZYaUaAp9lGgWSwV1jAphdHRyaWJ1dGVzlH2UKIwIc3Vydml2YWyUSwGMC3N0aWxsX2FsaXZl
+lEsBjBNhZ2VfYXRfaGVhcnRfYXR0YWNrlEsBjBFwZXJpY2FyZF9lZmZ1c2lvbpRLAYwQZnJhY3Rf
+c2hvcnRlbmluZ5RLAYwEZXBzc5RLAYwEbHZkZJRLAYwRd2FsbF9tb3Rpb25fc2NvcmWUSwGMEXdh
+bGxfbW90aW9uX2luZGV4lEsBjARtdWx0lEsBjAphbGl2ZV9hdF8xlEsBjAhTZWxlY3RlZJRLAXWM
+BW1ldGFzlH2UdWJoGymBlH2UKGgefZQojAphdHRyX2NvbG9ylGgxS2aGlIwKYXR0cl9sYWJlbJRO
+Sv7///+GlIwKYXR0cl9zaGFwZZROSv7///+GlIwJYXR0cl9zaXpllE5K/v///4aUjAZhdHRyX3iU
+aDFLZoaUjAZhdHRyX3mUaDNLZoaUjAVncmFwaJR9lGgWSwV1aC99lChoMUsCaDJLAWgzSwJoNEsB
+aDVLAmg2SwJoN0sCaDhLAmg5SwJoOksCaDtLAWg8SwF1aD19lHViZXUu
+</properties>
+		<properties node_id="12" format="pickle">gASVkQEAAAAAAAB9lCiMCGF1dG9zZW5klIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZlZFdp
+ZGdldEdlb21ldHJ5lENCAdnQywADAAAAAAHVAAAAgAAABCoAAAKSAAAB1gAAAJ4AAAQpAAACkQAA
+AAAAAAAABgAAAAHWAAAAngAABCkAAAKRlIwJdmFyX2hpbnRzlH2UKE6MIE9yYW5nZS53aWRnZXRz
+LmRhdGEub3dkaXNjcmV0aXpllIwHVmFySGludJSTlGgHjAdNZXRob2RzlJOUSwOFlFKUSwKFlIaU
+gZSMCHN1cnZpdmFslImGlGgJaA1LAoWUhpSBlIwTYWdlX2F0X2hlYXJ0X2F0dGFja5SJhpRoFYwQ
+ZnJhY3Rfc2hvcnRlbmluZ5SJhpRoFYwEZXBzc5SJhpRoFYwEbHZkZJSJhpRoFYwRd2FsbF9tb3Rp
+b25fc2NvcmWUiYaUaBWMEXdhbGxfbW90aW9uX2luZGV4lImGlGgVjARtdWx0lImGlGgVdYwLX192
+ZXJzaW9uX1+USwN1Lg==
+</properties>
+		<properties node_id="13" format="pickle">gASVpAIAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5
+lENCAdnQywADAAD/////////+QAABgAAAANgAAAAAAAAABcAAAX/AAADLwAAAAACAAAABgAAAAAA
+AAAAFwAABf8AAANflIwJc2VsZWN0aW9ulF2UjAtzaG93X3Njb3Jlc5SIjAtzY29yZV90YWJsZZR9
+lIwQc2hvd19zY29yZV9oaW50c5R9lCiMBk1vZGVsX5SIjAZUcmFpbl+UiYwFVGVzdF+UiYwCQ0GU
+iIwXUHJlY2lzaW9uUmVjYWxsRlN1cHBvcnSUiIwLVGFyZ2V0U2NvcmWUiIwJUHJlY2lzaW9ulIiM
+BlJlY2FsbJSIjAJGMZSIjANBVUOUiIwHTG9nTG9zc5SJjAtTcGVjaWZpY2l0eZSJjBdNYXR0aGV3
+c0NvcnJDb2VmZmljaWVudJSIjANNU0WUiIwEUk1TRZSIjANNQUWUiIwETUFQRZSIjAJSMpSIjAZD
+VlJNU0WUiYwPQ2x1c3RlcmluZ1Njb3JllIiMClNpbGhvdWV0dGWUiIwXQWRqdXN0ZWRNdXR1YWxJ
+bmZvU2NvcmWUiHVzjAtfX3ZlcnNpb25fX5RLAowQY29udGV4dF9zZXR0aW5nc5RdlIwVb3Jhbmdl
+d2lkZ2V0LnNldHRpbmdzlIwHQ29udGV4dJSTlCmBlH2UKIwGdmFsdWVzlH2UKIwXc2hvd19wcm9i
+YWJpbGl0eV9lcnJvcnOUiIwPc2hvd19yZWdfZXJyb3JzlEsBjAtzaG93bl9wcm9ic5RLAIwMdGFy
+Z2V0X2NsYXNzlIwWKEF2ZXJhZ2Ugb3ZlciBjbGFzc2VzKZRoB32UaCFLAnWMB2NsYXNzZXOUKXVi
+YXUu
+</properties>
+		<properties node_id="14" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00Y\x00\x00\x00O\x00\x00\x03\xd0\x00\x00\x02\xad\x00\x00\x00Z\x00\x00\x00m\x00\x00\x03\xcf\x00\x00\x02\xac\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x00Z\x00\x00\x00m\x00\x00\x03\xcf\x00\x00\x02\xac', 'scriptLibrary': [{'name': 'Table from numpy', 'script': 'from sklearn.cluster import KMeans\nimport numpy as np\n\ndata = np.array(in_data)\n# Assuming your data is stored in a numpy array \'data\'\n# Initialize the KMeans model with the desired number of clusters\nkmeans = KMeans(n_clusters=1)\n\n# Fit the KMeans model to your data\nkmeans.fit(data)\n\n# Get the cluster centers and labels\ncluster_centers = kmeans.cluster_centers_\nprint(cluster_centers)\nlabels = kmeans.labels_\n\n# Calculate the sum of squared errors (SSE)\nsse\nfor i in range(len(data)):\n    cluster_center = cluster_centers[labels[i]]\n    sse += np.linalg.norm(data[i] - cluster_center) ** 2\n\nprint("SSE:", sse)', 'filename': None}], 'scriptText': 'import numpy as np\nfrom sklearn.cluster import AgglomerativeClustering\nfrom sklearn.metrics import silhouette_score, davies_bouldin_score\n\n# Accessing data from Orange\'s input\ndata = np.array(in_data)  # \'in_data\' is the variable name representing the input data\n\n# Assuming \'data\' contains your dataset\n# Replace \'data\' with the actual variable name containing your data\n\n# Fit Hierarchical Clustering model\nn_clusters = 2  # Change the number of clusters as needed\nhierarchical_clustering = AgglomerativeClustering(n_clusters=n_clusters)\nlabels = hierarchical_clustering.fit_predict(data)\n\n# Compute Silhouette Score\nsilhouette_avg = silhouette_score(data, labels)\nprint("Silhouette Score:", silhouette_avg)\n\n# Compute Davies-Bouldin Index\ndavies_bouldin = davies_bouldin_score(data, labels)\nprint("Davies-Bouldin Index:", davies_bouldin)\n', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x9d\x00\x00\x00]\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+		<properties node_id="15" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01o\x00\x00\x00r\x00\x00\x04\x90\x00\x00\x02\xd0\x00\x00\x01p\x00\x00\x00\x90\x00\x00\x04\x8f\x00\x00\x02\xcf\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01p\x00\x00\x00\x90\x00\x00\x04\x8f\x00\x00\x02\xcf', 'scriptLibrary': [{'name': 'New script', 'script': 'import numpy as np\n\n# Function to calculate Euclidean distance\ndef euclidean_distance(point1, point2):\n    return np.sqrt(np.sum((point1 - point2) ** 2))\n\n# Function to calculate sum of squared error distance\ndef sum_of_squared_error(data, centroids):\n    sse = 0\n    for i, point in enumerate(data):\n        centroid = centroids[i]\n        sse += euclidean_distance(point, centroid) ** 2\n    return sse\n\n# Convert the dataset to a numpy array\ndata = np.array([\n    [1, 3, 1, 1, 2, 1, 2, 0, 0, 0],\n    # Add more data points here...\n])\n\n# Example centroids\ncentroids = np.array([\n    [1, 2, 1, 1, 2, 1, 2, 0, 0, 0],\n    # Add more centroids here...\n])\n\n\n# Calculate the sum of squared error distance\nsse = sum_of_squared_error(data, centroids)\nprint("Sum of Squared Error Distance:", sse)', 'filename': None}], 'scriptText': 'import numpy as np\nfrom sklearn.cluster import KMeans\nfrom sklearn.metrics import silhouette_score, davies_bouldin_score\n\n# Accessing data from Orange\'s input\ndata = np.array(in_data)  # \'in_data\' is the variable name representing the input data\n\n# Assuming \'data\' contains your dataset\n# Replace \'data\' with the actual variable name containing your data\n\n# Fit K-Means clustering model\nkmeans = KMeans(n_clusters=3)  # Change the number of clusters as needed\nkmeans.fit(data)\n\n# Get cluster labels\nlabels = kmeans.labels_\n\n# Compute Silhouette Score\nsilhouette_avg = silhouette_score(data, labels)\nprint("Silhouette Score:", silhouette_avg)\n\n# Compute Davies-Bouldin Index\ndavies_bouldin = davies_bouldin_score(data, labels)\nprint("Davies-Bouldin Index:", davies_bouldin)\n', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x9d\x00\x00\x00]\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+		<properties node_id="16" format="pickle">gASVTQQAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMC2F1dG9fc2FtcGxllIiMEmNvbnRyb2xBcmVh
+VmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAD/////////+QAABgAAAANg
+AAAAAAAAABcAAAX/AAADXwAAAAACAAAABgAAAAAAAAAAFwAABf8AAANflIwJc2VsZWN0aW9ulE6M
+EXRvb2x0aXBfc2hvd3NfYWxslIiMD3Zpc3VhbF9zZXR0aW5nc5R9lIwFZ3JhcGiUfZQojAthbHBo
+YV92YWx1ZZRLgIwNY2xhc3NfZGVuc2l0eZSIjBFqaXR0ZXJfY29udGludW91c5SJjAtqaXR0ZXJf
+c2l6ZZRLCowTbGFiZWxfb25seV9zZWxlY3RlZJSIjBZvcnRob25vcm1hbF9yZWdyZXNzaW9ulImM
+C3BvaW50X3dpZHRolEsLjAlzaG93X2dyaWSUiYwLc2hvd19sZWdlbmSUiIwNc2hvd19yZWdfbGlu
+ZZSJdYwLX192ZXJzaW9uX1+USwWMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQu
+c2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojAphdHRyX2NvbG9ylIwKYWxp
+dmVfYXRfMZRLZYaUjAphdHRyX2xhYmVslE5K/v///4aUjAphdHRyX3NoYXBllE5K/v///4aUjAlh
+dHRyX3NpemWUTkr+////hpSMBmF0dHJfeJRoIUtlhpSMBmF0dHJfeZSME2FnZV9hdF9oZWFydF9h
+dHRhY2uUS2aGlGgKfZRoFksFdYwKYXR0cmlidXRlc5R9lCiMCHN1cnZpdmFslEsCjAtzdGlsbF9h
+bGl2ZZRLAWgsSwKMEXBlcmljYXJkX2VmZnVzaW9ulEsBjBBmcmFjdF9zaG9ydGVuaW5nlEsCjARl
+cHNzlEsCjARsdmRklEsCjBF3YWxsX21vdGlvbl9zY29yZZRLAowRd2FsbF9tb3Rpb25faW5kZXiU
+SwKMBG11bHSUSwJoIUsBdYwFbWV0YXOUfZR1YmgbKYGUfZQoaB59lChoIGgxS2aGlGgjTkr+////
+hpRoJU5K/v///4aUaCdOSv7///+GlGgpaDFLZoaUaCtoLEtmhpRoCn2UaBZLBXVoL32UKIwIc3Vy
+dml2YWyUSwKMC3N0aWxsX2FsaXZllEsBjBNhZ2VfYXRfaGVhcnRfYXR0YWNrlEsCjBFwZXJpY2Fy
+ZF9lZmZ1c2lvbpRLAYwQZnJhY3Rfc2hvcnRlbmluZ5RLAowEZXBzc5RLAowEbHZkZJRLAowRd2Fs
+bF9tb3Rpb25fc2NvcmWUSwKMEXdhbGxfbW90aW9uX2luZGV4lEsCjARtdWx0lEsCjAphbGl2ZV9h
+dF8xlEsBdWg6fZSMB091dGxpZXKUSwFzdWJldS4=
+</properties>
+		<properties node_id="17" format="literal">{'auto_commit': True, 'controlAreaVisible': True, 'outlier_method': 2, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02^\x00\x00\x01\x10\x00\x00\x03\xa1\x00\x00\x02\x02\x00\x00\x02_\x00\x00\x01.\x00\x00\x03\xa0\x00\x00\x02\x01\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x02_\x00\x00\x01.\x00\x00\x03\xa0\x00\x00\x02\x01', 'cov_editor': {'cont': 10, 'empirical_covariance': False, 'support_fraction': 1}, 'isf_editor': {'cont': 10, 'replicable': False}, 'lof_editor': {'cont': 10, 'metric_index': 0, 'n_neighbors': 20}, 'svm_editor': {'gamma': 0.01, 'nu': 50}, '__version__': 2}</properties>
+		<properties node_id="18" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\xff\xff\xff\xff\xff\xff\xff\xf9\x00\x00\x06\x00\x00\x00\x03`\x00\x00\x00\x00\x00\x00\x00\x17\x00\x00\x05\xff\x00\x00\x03_\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x00\x00\x00\x00\x00\x17\x00\x00\x05\xff\x00\x00\x03_', 'select_rows': True, 'show_attribute_labels': True, 'show_distributions': False, 'stored_selection': {'rows': [], 'columns': []}, 'stored_sort': [], '__version__': 1}</properties>
+		<properties node_id="19" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00\x01\x00\x00\x00\x10\x00\x00\x06\x00\x00\x00\x03o\x00\x00\x00\x02\x00\x00\x00.\x00\x00\x05\xff\x00\x00\x03n\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x00\x02\x00\x00\x00.\x00\x00\x05\xff\x00\x00\x03n', 'select_rows': True, 'show_attribute_labels': True, 'show_distributions': False, 'stored_selection': {'rows': [], 'columns': []}, 'stored_sort': [], '__version__': 1}</properties>
+		<properties node_id="20" format="literal">{'autocommit': True, 'axis': 0, 'controlAreaVisible': True, 'metric_id': 1, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02p\x00\x00\x01\x0c\x00\x00\x03\x8f\x00\x00\x026\x00\x00\x02q\x00\x00\x01*\x00\x00\x03\x8e\x00\x00\x025\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x02q\x00\x00\x01*\x00\x00\x03\x8e\x00\x00\x025', '__version__': 4}</properties>
+		<properties node_id="21" format="pickle">gASVKwMAAAAAAAB9lCiMF2Fubm90YXRpb25faWZfZW51bWVyYXRllIwLRW51bWVyYXRpb26UjBNh
+bm5vdGF0aW9uX2lmX25hbWVzlIwETmFtZZSMCmF1dG9jb21taXSUiIwSY29udHJvbEFyZWFWaXNp
+YmxllIiMCWN1dF9yYXRpb5RHQFLAAAAAAACMEWxhYmVsX29ubHlfc3Vic2V0lImMB2xpbmthZ2WU
+SwSMCW1heF9kZXB0aJRLCowHcHJ1bmluZ5RLAIwTc2F2ZWRXaWRnZXRHZW9tZXRyeZRDQgHZ0MsA
+AwAAAAABkgAAAIAAAARtAAACkgAAAZMAAACeAAAEbAAAApEAAAAAAAAAAAYAAAABkwAAAJ4AAARs
+AAACkZSMEHNlbGVjdGlvbl9tZXRob2SUSwCMBXRvcF9ulEsDjAt6b29tX2ZhY3RvcpRLAIwLX192
+ZXJzaW9uX1+USwKMFF9fc2Vzc2lvbl9zdGF0ZV9kYXRhlH2UjAd2ZXJzaW9ulEsASwBLAIeUc4wQ
+Y29udGV4dF9zZXR0aW5nc5RdlCiMFW9yYW5nZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5Qp
+gZR9lCiMBnZhbHVlc5R9lCiMCmFubm90YXRpb26UjAhzdXJ2aXZhbJRLZYaUjAhjb2xvcl9ieZRO
+Sv7///+GlGgRSwJ1jAphdHRyaWJ1dGVzlH2UKGggSwGMC3N0aWxsX2FsaXZllEsBjBNhZ2VfYXRf
+aGVhcnRfYXR0YWNrlEsBjBFwZXJpY2FyZF9lZmZ1c2lvbpRLAYwQZnJhY3Rfc2hvcnRlbmluZ5RL
+AYwEZXBzc5RLAYwEbHZkZJRLAYwRd2FsbF9tb3Rpb25fc2NvcmWUSwGMEXdhbGxfbW90aW9uX2lu
+ZGV4lEsBjARtdWx0lEsBjAphbGl2ZV9hdF8xlEsBdYwFbWV0YXOUfZR1YmgaKYGUfZQoaB19lCho
+H2gpS2aGlGgiTkr+////hpRoEUsCdWgkfZQoaCBLAmgmSwFoJ0sCaChLAWgpSwJoKksCaCtLAmgs
+SwJoLUsCaC5LAmgvSwF1aDB9lHViZXUu
+</properties>
+		<properties node_id="22" format="pickle">gASVqAQAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMC2F1dG9fc2FtcGxllIiMEmNvbnRyb2xBcmVh
+VmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAD/////////+QAABgAAAANg
+AAAAAAAAABcAAAX/AAADXwAAAAACAAAABgAAAAAAAAAAFwAABf8AAANflIwJc2VsZWN0aW9ulE6M
+EXRvb2x0aXBfc2hvd3NfYWxslIiMD3Zpc3VhbF9zZXR0aW5nc5R9lIwFZ3JhcGiUfZQojAthbHBo
+YV92YWx1ZZRLaIwNY2xhc3NfZGVuc2l0eZSIjBFqaXR0ZXJfY29udGludW91c5SJjAtqaXR0ZXJf
+c2l6ZZRLCowTbGFiZWxfb25seV9zZWxlY3RlZJSJjBZvcnRob25vcm1hbF9yZWdyZXNzaW9ulImM
+C3BvaW50X3dpZHRolEsQjAlzaG93X2dyaWSUiYwLc2hvd19sZWdlbmSUiIwNc2hvd19yZWdfbGlu
+ZZSJdYwLX192ZXJzaW9uX1+USwWMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQu
+c2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojAphdHRyX2NvbG9ylIwHQ2x1
+c3RlcpRLZYaUjAphdHRyX2xhYmVslE5K/v///4aUjAphdHRyX3NoYXBllE5K/v///4aUjAlhdHRy
+X3NpemWUTkr+////hpSMBmF0dHJfeJRoIUtlhpSMBmF0dHJfeZRoIUtlhpRoCn2UaBZLBXWMCmF0
+dHJpYnV0ZXOUfZQojAhzdXJ2aXZhbJRLAYwLc3RpbGxfYWxpdmWUSwGME2FnZV9hdF9oZWFydF9h
+dHRhY2uUSwGMEXBlcmljYXJkX2VmZnVzaW9ulEsBjBBmcmFjdF9zaG9ydGVuaW5nlEsBjARlcHNz
+lEsBjARsdmRklEsBjBF3YWxsX21vdGlvbl9zY29yZZRLAYwRd2FsbF9tb3Rpb25faW5kZXiUSwGM
+BG11bHSUSwGMCmFsaXZlX2F0XzGUSwF1jAVtZXRhc5R9lCiMB0NsdXN0ZXKUSwGMClNpbGhvdWV0
+dGWUSwJ1dWJoGymBlH2UKGgefZQojAphdHRyX2NvbG9ylGgxS2WGlIwKYXR0cl9sYWJlbJROSv7/
+//+GlIwKYXR0cl9zaGFwZZROSv7///+GlIwJYXR0cl9zaXpllE5K/v///4aUjAZhdHRyX3iUaDFL
+ZYaUjAZhdHRyX3mUaDZLZYaUjAVncmFwaJR9lGgWSwV1aC59lChoMEsBaDFLAWgySwFoM0sBaDRL
+AWg1SwFoNksBaDdLAWg4SwFoOUsBaDpLAXVoO32UdWJoGymBlH2UKGgefZQoaEJoPUtlhpRoRE5K
+/v///4aUaEZOSv7///+GlGhITkr+////hpRoSmg9S2WGlGhMaD1LZYaUaE59lGgWSwV1aC59lCho
+MEsCaDFLAWgySwJoM0sBaDRLAmg1SwJoNksCaDdLAmg4SwJoOUsCaDpLAXVoO32UKGg9SwFoPksC
+dXViZXUu
+</properties>
+		<properties node_id="23" format="literal">{'auto_commit': True, 'controlAreaVisible': True, 'k': 5, 'k_from': 2, 'k_to': 8, 'max_iterations': 100, 'n_init': 15, 'normalize': True, 'optimize_k': False, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\x91\x00\x00\x00\xa8\x00\x00\x03U\x00\x00\x01\xd7\x00\x00\x01\x92\x00\x00\x00\xc6\x00\x00\x03T\x00\x00\x01\xd6\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01\x92\x00\x00\x00\xc6\x00\x00\x03T\x00\x00\x01\xd6', 'selection': None, 'smart_init': 0, '__version__': 2}</properties>
+		<properties node_id="24" format="pickle">gASVKwQAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMC2F1dG9fc2FtcGxllIiMEmNvbnRyb2xBcmVh
+VmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAD/////////+QAABgAAAANg
+AAAAAAAAABcAAAX/AAADXwAAAAACAAAABgAAAAAAAAAAFwAABf8AAANflIwJc2VsZWN0aW9ulE6M
+EXRvb2x0aXBfc2hvd3NfYWxslIiMD3Zpc3VhbF9zZXR0aW5nc5R9lIwFZ3JhcGiUfZQojAthbHBo
+YV92YWx1ZZRLgIwNY2xhc3NfZGVuc2l0eZSIjBFqaXR0ZXJfY29udGludW91c5SJjAtqaXR0ZXJf
+c2l6ZZRLCowTbGFiZWxfb25seV9zZWxlY3RlZJSIjBZvcnRob25vcm1hbF9yZWdyZXNzaW9ulImM
+C3BvaW50X3dpZHRolEsHjAlzaG93X2dyaWSUiIwLc2hvd19sZWdlbmSUiIwNc2hvd19yZWdfbGlu
+ZZSJdYwLX192ZXJzaW9uX1+USwWMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQu
+c2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojAphdHRyX2NvbG9ylIwIc3Vy
+dml2YWyUS2WGlIwKYXR0cl9sYWJlbJSMC3N0aWxsX2FsaXZllEtlhpSMCmF0dHJfc2hhcGWUTkr+
+////hpSMCWF0dHJfc2l6ZZROSv7///+GlIwGYXR0cl94lGghS2WGlIwGYXR0cl95lIwRd2FsbF9t
+b3Rpb25faW5kZXiUS2WGlGgKfZRoFksFdYwKYXR0cmlidXRlc5R9lCiMCHN1cnZpdmFslEsBjAtz
+dGlsbF9hbGl2ZZRLAYwTYWdlX2F0X2hlYXJ0X2F0dGFja5RLAYwRcGVyaWNhcmRfZWZmdXNpb26U
+SwGMEGZyYWN0X3Nob3J0ZW5pbmeUSwGMBGVwc3OUSwGMBGx2ZGSUSwGMEXdhbGxfbW90aW9uX3Nj
+b3JllEsBjBF3YWxsX21vdGlvbl9pbmRleJRLAYwEbXVsdJRLAYwKYWxpdmVfYXRfMZRLAYwIU2Vs
+ZWN0ZWSUSwF1jAVtZXRhc5R9lHViaBspgZR9lChoHn2UKIwKYXR0cl9jb2xvcpRoMktmhpSMCmF0
+dHJfbGFiZWyUTkr+////hpSMCmF0dHJfc2hhcGWUTkr+////hpSMCWF0dHJfc2l6ZZROSv7///+G
+lIwGYXR0cl94lGgyS2aGlIwGYXR0cl95lGg0S2aGlIwFZ3JhcGiUfZRoFksFdWgwfZQoaDJLAmgz
+SwFoNEsCaDVLAWg2SwJoN0sCaDhLAmg5SwJoOksCaDtLAmg8SwFoPUsBdWg+fZR1YmV1Lg==
+</properties>
+		<properties node_id="25" format="pickle">gASVpAIAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5
+lENCAdnQywADAAD/////////+QAABgAAAANgAAAAAAAAABcAAAX/AAADLwAAAAACAAAABgAAAAAA
+AAAAFwAABf8AAANflIwJc2VsZWN0aW9ulF2UjAtzaG93X3Njb3Jlc5SIjAtzY29yZV90YWJsZZR9
+lIwQc2hvd19zY29yZV9oaW50c5R9lCiMBk1vZGVsX5SIjAZUcmFpbl+UiYwFVGVzdF+UiYwCQ0GU
+iIwXUHJlY2lzaW9uUmVjYWxsRlN1cHBvcnSUiIwLVGFyZ2V0U2NvcmWUiIwJUHJlY2lzaW9ulIiM
+BlJlY2FsbJSIjAJGMZSIjANBVUOUiIwHTG9nTG9zc5SJjAtTcGVjaWZpY2l0eZSJjBdNYXR0aGV3
+c0NvcnJDb2VmZmljaWVudJSIjANNU0WUiIwEUk1TRZSIjANNQUWUiIwETUFQRZSIjAJSMpSIjAZD
+VlJNU0WUiYwPQ2x1c3RlcmluZ1Njb3JllIiMClNpbGhvdWV0dGWUiIwXQWRqdXN0ZWRNdXR1YWxJ
+bmZvU2NvcmWUiHVzjAtfX3ZlcnNpb25fX5RLAowQY29udGV4dF9zZXR0aW5nc5RdlIwVb3Jhbmdl
+d2lkZ2V0LnNldHRpbmdzlIwHQ29udGV4dJSTlCmBlH2UKIwGdmFsdWVzlH2UKIwXc2hvd19wcm9i
+YWJpbGl0eV9lcnJvcnOUiIwPc2hvd19yZWdfZXJyb3JzlEsBjAtzaG93bl9wcm9ic5RLAIwMdGFy
+Z2V0X2NsYXNzlIwWKEF2ZXJhZ2Ugb3ZlciBjbGFzc2VzKZRoB32UaCFLAnWMB2NsYXNzZXOUKXVi
+YXUu
+</properties>
+		<properties node_id="26" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00Y\x00\x00\x00O\x00\x00\x03\xd0\x00\x00\x02\xad\x00\x00\x00Z\x00\x00\x00m\x00\x00\x03\xcf\x00\x00\x02\xac\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x00Z\x00\x00\x00m\x00\x00\x03\xcf\x00\x00\x02\xac', 'scriptLibrary': [{'name': 'Table from numpy', 'script': 'import numpy as np\nfrom Orange.data import Table, Domain, ContinuousVariable, DiscreteVariable\n\n# Define domain\ndomain = Domain([ContinuousVariable("age"),\n                 ContinuousVariable("height"),\n                 DiscreteVariable("gender", values=("M", "F"))])\n\n# Define data array\narr = np.array([\n    [25, 186, 0],\n    [30, 164, 1]\n])\n\n# Create Orange Table\nout_data = Table.from_numpy(domain, arr)\n\n# Extract data from Orange Table\ndata = out_data.X\n\n# Calculate mean for each feature\nmean = np.mean(data, axis=0)\n\n# Calculate squared differences\nsquared_diff = np.sum((data - mean) ** 2, axis=1)\n\n# Calculate mean squared error\nmse = np.mean(squared_diff)\n\nprint("Mean Squared Error (MSE):", mse)\n', 'filename': None}], 'scriptText': 'import numpy as np\nfrom sklearn.cluster import AgglomerativeClustering\nfrom sklearn.metrics import silhouette_score, davies_bouldin_score\n\n# Accessing data from Orange\'s input\ndata = np.array(in_data)  # \'in_data\' is the variable name representing the input data\n\n# Assuming \'data\' contains your dataset\n# Replace \'data\' with the actual variable name containing your data\n\n# Fit Hierarchical Clustering model\nn_clusters = 2  # Change the number of clusters as needed\nhierarchical_clustering = AgglomerativeClustering(n_clusters=n_clusters)\nlabels = hierarchical_clustering.fit_predict(data)\n\n# Compute Silhouette Score\nsilhouette_avg = silhouette_score(data, labels)\nprint("Silhouette Score:", silhouette_avg)\n\n# Compute Davies-Bouldin Index\ndavies_bouldin = davies_bouldin_score(data, labels)\nprint("Davies-Bouldin Index:", davies_bouldin)\n', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x9d\x00\x00\x00]\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+		<properties node_id="27" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01o\x00\x00\x00r\x00\x00\x04\x90\x00\x00\x02\xd0\x00\x00\x01p\x00\x00\x00\x90\x00\x00\x04\x8f\x00\x00\x02\xcf\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01p\x00\x00\x00\x90\x00\x00\x04\x8f\x00\x00\x02\xcf', 'scriptLibrary': [{'name': 'New script', 'script': 'from sklearn.cluster import KMeans\nimport numpy as np\n\n# Assuming your data is stored in a numpy array \'data\'\n# Initialize the KMeans model with the desired number of clusters\nkmeans = KMeans(n_clusters=1)\n\n# Fit the KMeans model to your data\nkmeans.fit(data)\n\n# Get the cluster centers and labels\ncluster_centers = kmeans.cluster_centers_\nprint(cluster_centers)\nlabels = kmeans.labels_\n\n# Calculate the sum of squared errors (SSE)\nsse\nfor i in range(len(data)):\n    cluster_center = cluster_centers[labels[i]]\n    sse += np.linalg.norm(data[i] - cluster_center) ** 2\n\nprint("SSE:", sse)', 'filename': None}], 'scriptText': 'import numpy as np\nfrom sklearn.cluster import KMeans\nfrom sklearn.metrics import silhouette_score, davies_bouldin_score\n\n# Accessing data from Orange\'s input\ndata = np.array(in_data)  # \'in_data\' is the variable name representing the input data\n\n# Assuming \'data\' contains your dataset\n# Replace \'data\' with the actual variable name containing your data\n\n# Fit K-Means clustering model\nkmeans = KMeans(n_clusters=3)  # Change the number of clusters as needed\nkmeans.fit(data)\n\n# Get cluster labels\nlabels = kmeans.labels_\n\n# Compute Silhouette Score\nsilhouette_avg = silhouette_score(data, labels)\nprint("Silhouette Score:", silhouette_avg)\n\n# Compute Davies-Bouldin Index\ndavies_bouldin = davies_bouldin_score(data, labels)\nprint("Davies-Bouldin Index:", davies_bouldin)\n', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x9d\x00\x00\x00]\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+		<properties node_id="28" format="pickle">gASVMQMAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMC2F1dG9fc2FtcGxllIiMEmNvbnRyb2xBcmVh
+VmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAD/////////+QAABgAAAANg
+AAAAAAAAABcAAAX/AAADXwAAAAACAAAABgAAAAAAAAAAFwAABf8AAANflIwJc2VsZWN0aW9ulE6M
+EXRvb2x0aXBfc2hvd3NfYWxslIiMD3Zpc3VhbF9zZXR0aW5nc5R9lIwFZ3JhcGiUfZQojAthbHBo
+YV92YWx1ZZRLgIwNY2xhc3NfZGVuc2l0eZSIjBFqaXR0ZXJfY29udGludW91c5SJjAtqaXR0ZXJf
+c2l6ZZRLCowTbGFiZWxfb25seV9zZWxlY3RlZJSIjBZvcnRob25vcm1hbF9yZWdyZXNzaW9ulImM
+C3BvaW50X3dpZHRolEsLjAlzaG93X2dyaWSUiYwLc2hvd19sZWdlbmSUiIwNc2hvd19yZWdfbGlu
+ZZSJdYwLX192ZXJzaW9uX1+USwWMEGNvbnRleHRfc2V0dGluZ3OUXZSMFW9yYW5nZXdpZGdldC5z
+ZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9lCiMBnZhbHVlc5R9lCiMCmF0dHJfY29sb3KUjAtzdGls
+bF9hbGl2ZZRLZYaUjAphdHRyX2xhYmVslE5K/v///4aUjAphdHRyX3NoYXBllE5K/v///4aUjAlh
+dHRyX3NpemWUTkr+////hpSMBmF0dHJfeJRoIUtlhpSMBmF0dHJfeZSMBGx2ZGSUS2WGlGgKfZRo
+FksFdYwKYXR0cmlidXRlc5R9lCiMCHN1cnZpdmFslEsBaCFLAYwTYWdlX2F0X2hlYXJ0X2F0dGFj
+a5RLAYwRcGVyaWNhcmRfZWZmdXNpb26USwGMEGZyYWN0X3Nob3J0ZW5pbmeUSwGMBGVwc3OUSwFo
+LEsBjBF3YWxsX21vdGlvbl9zY29yZZRLAYwRd2FsbF9tb3Rpb25faW5kZXiUSwGMBG11bHSUSwGM
+CmFsaXZlX2F0XzGUSwF1jAVtZXRhc5R9lHViYXUu
+</properties>
+		<properties node_id="29" format="literal">{'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x027\x00\x00\x00i\x00\x00\x02\xf1\x00\x00\x016\x00\x00\x028\x00\x00\x00\x87\x00\x00\x02\xf0\x00\x00\x015\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x028\x00\x00\x00\x87\x00\x00\x02\xf0\x00\x00\x015', '__version__': 1}</properties>
+		<properties node_id="30" format="literal">{'autocommit': True, 'axis': 0, 'controlAreaVisible': True, 'metric_id': 1, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02p\x00\x00\x01\x0c\x00\x00\x03\x8f\x00\x00\x026\x00\x00\x02q\x00\x00\x01*\x00\x00\x03\x8e\x00\x00\x025\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x02q\x00\x00\x01*\x00\x00\x03\x8e\x00\x00\x025', '__version__': 4}</properties>
+		<properties node_id="31" format="pickle">gASVKwMAAAAAAAB9lCiMF2Fubm90YXRpb25faWZfZW51bWVyYXRllIwLRW51bWVyYXRpb26UjBNh
+bm5vdGF0aW9uX2lmX25hbWVzlIwETmFtZZSMCmF1dG9jb21taXSUiIwSY29udHJvbEFyZWFWaXNp
+YmxllIiMCWN1dF9yYXRpb5RHQFLAAAAAAACMEWxhYmVsX29ubHlfc3Vic2V0lImMB2xpbmthZ2WU
+SwSMCW1heF9kZXB0aJRLCowHcHJ1bmluZ5RLAIwTc2F2ZWRXaWRnZXRHZW9tZXRyeZRDQgHZ0MsA
+AwAAAAABkgAAAIAAAARtAAACkgAAAZMAAACeAAAEbAAAApEAAAAAAAAAAAYAAAABkwAAAJ4AAARs
+AAACkZSMEHNlbGVjdGlvbl9tZXRob2SUSwCMBXRvcF9ulEsDjAt6b29tX2ZhY3RvcpRLAIwLX192
+ZXJzaW9uX1+USwKMFF9fc2Vzc2lvbl9zdGF0ZV9kYXRhlH2UjAd2ZXJzaW9ulEsASwBLAIeUc4wQ
+Y29udGV4dF9zZXR0aW5nc5RdlCiMFW9yYW5nZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5Qp
+gZR9lCiMBnZhbHVlc5R9lCiMCmFubm90YXRpb26UjAphbGl2ZV9hdF8xlEtlhpSMCGNvbG9yX2J5
+lE5K/v///4aUaBFLAnWMCmF0dHJpYnV0ZXOUfZQojAhzdXJ2aXZhbJRLAYwLc3RpbGxfYWxpdmWU
+SwGME2FnZV9hdF9oZWFydF9hdHRhY2uUSwGMEXBlcmljYXJkX2VmZnVzaW9ulEsBjBBmcmFjdF9z
+aG9ydGVuaW5nlEsBjARlcHNzlEsBjARsdmRklEsBjBF3YWxsX21vdGlvbl9zY29yZZRLAYwRd2Fs
+bF9tb3Rpb25faW5kZXiUSwGMBG11bHSUSwFoIEsBdYwFbWV0YXOUfZR1YmgaKYGUfZQoaB19lCho
+H2gqS2aGlGgiTkr+////hpRoEUsCdWgkfZQoaCZLAmgnSwFoKEsCaClLAWgqSwJoK0sCaCxLAmgt
+SwJoLksCaC9LAmggSwF1aDB9lHViZXUu
+</properties>
+		<properties node_id="32" format="pickle">gASVZQMAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMC2F1dG9fc2FtcGxllIiMEmNvbnRyb2xBcmVh
+VmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAD/////////+QAABgAAAANg
+AAAAAAAAABcAAAX/AAADXwAAAAACAAAABgAAAAAAAAAAFwAABf8AAANflIwJc2VsZWN0aW9ulE6M
+EXRvb2x0aXBfc2hvd3NfYWxslIiMD3Zpc3VhbF9zZXR0aW5nc5R9lIwFZ3JhcGiUfZQojAthbHBo
+YV92YWx1ZZRLgIwNY2xhc3NfZGVuc2l0eZSIjBFqaXR0ZXJfY29udGludW91c5SJjAtqaXR0ZXJf
+c2l6ZZRLCowTbGFiZWxfb25seV9zZWxlY3RlZJSIjBZvcnRob25vcm1hbF9yZWdyZXNzaW9ulImM
+C3BvaW50X3dpZHRolEsLjAlzaG93X2dyaWSUiYwLc2hvd19sZWdlbmSUiIwNc2hvd19yZWdfbGlu
+ZZSJdYwLX192ZXJzaW9uX1+USwWMEGNvbnRleHRfc2V0dGluZ3OUXZSMFW9yYW5nZXdpZGdldC5z
+ZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9lCiMBnZhbHVlc5R9lCiMCmF0dHJfY29sb3KUjBNhZ2Vf
+YXRfaGVhcnRfYXR0YWNrlEtlhpSMCmF0dHJfbGFiZWyUjAtzdGlsbF9hbGl2ZZRLZYaUjAphdHRy
+X3NoYXBllE5K/v///4aUjAlhdHRyX3NpemWUTkr+////hpSMBmF0dHJfeJSMCHN1cnZpdmFslEtl
+hpSMBmF0dHJfeZRoK0tlhpRoCn2UaBZLBXWMCmF0dHJpYnV0ZXOUfZQojAhzdXJ2aXZhbJRLAYwL
+c3RpbGxfYWxpdmWUSwGME2FnZV9hdF9oZWFydF9hdHRhY2uUSwGMEXBlcmljYXJkX2VmZnVzaW9u
+lEsBjBBmcmFjdF9zaG9ydGVuaW5nlEsBjARlcHNzlEsBjARsdmRklEsBjBF3YWxsX21vdGlvbl9z
+Y29yZZRLAYwRd2FsbF9tb3Rpb25faW5kZXiUSwGMBG11bHSUSwGMCmFsaXZlX2F0XzGUSwGMCFNl
+bGVjdGVklEsBdYwFbWV0YXOUfZR1YmF1Lg==
+</properties>
+		<properties node_id="33" format="pickle">gASV7QAAAAAAAAB9lCiMCGF1dG9zZW5klIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZlZFdp
+ZGdldEdlb21ldHJ5lENCAdnQywADAAAAAAHVAAAAgAAABCoAAAKSAAAB1gAAAJ4AAAQpAAACkQAA
+AAAAAAAABgAAAAHWAAAAngAABCkAAAKRlIwJdmFyX2hpbnRzlH2UTowgT3JhbmdlLndpZGdldHMu
+ZGF0YS5vd2Rpc2NyZXRpemWUjAdWYXJIaW50lJOUaAeMB01ldGhvZHOUk5RLB4WUUpRLAoWUhpSB
+lHOMC19fdmVyc2lvbl9flEsDdS4=
+</properties>
+		<properties node_id="34" format="literal">{'auto_commit': True, 'controlAreaVisible': True, 'k': 3, 'k_from': 2, 'k_to': 8, 'max_iterations': 100, 'n_init': 15, 'normalize': True, 'optimize_k': 1, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\x91\x00\x00\x00\xa8\x00\x00\x03Q\x00\x00\x01\xd7\x00\x00\x01\x92\x00\x00\x00\xc6\x00\x00\x03P\x00\x00\x01\xd6\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01\x92\x00\x00\x00\xc6\x00\x00\x03P\x00\x00\x01\xd6', 'selection': 6, 'smart_init': 0, '__version__': 2}</properties>
+		<properties node_id="35" format="pickle">gASVXwMAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMC2F1dG9fc2FtcGxllIiMEmNvbnRyb2xBcmVh
+VmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAD/////////+QAABgAAAANg
+AAAAAAAAABcAAAX/AAADXwAAAAACAAAABgAAAAAAAAAAFwAABf8AAANflIwJc2VsZWN0aW9ulE6M
+EXRvb2x0aXBfc2hvd3NfYWxslIiMD3Zpc3VhbF9zZXR0aW5nc5R9lIwFZ3JhcGiUfZQojAthbHBo
+YV92YWx1ZZRLgIwNY2xhc3NfZGVuc2l0eZSIjBFqaXR0ZXJfY29udGludW91c5SJjAtqaXR0ZXJf
+c2l6ZZRLCowTbGFiZWxfb25seV9zZWxlY3RlZJSIjBZvcnRob25vcm1hbF9yZWdyZXNzaW9ulImM
+C3BvaW50X3dpZHRolEsLjAlzaG93X2dyaWSUiYwLc2hvd19sZWdlbmSUiIwNc2hvd19yZWdfbGlu
+ZZSJdYwLX192ZXJzaW9uX1+USwWMEGNvbnRleHRfc2V0dGluZ3OUXZSMFW9yYW5nZXdpZGdldC5z
+ZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9lCiMBnZhbHVlc5R9lCiMCmF0dHJfY29sb3KUjAhzdXJ2
+aXZhbJRLZYaUjAphdHRyX2xhYmVslE5K/v///4aUjAphdHRyX3NoYXBllE5K/v///4aUjAlhdHRy
+X3NpemWUTkr+////hpSMBmF0dHJfeJSMB0NsdXN0ZXKUS2WGlIwGYXR0cl95lGgqS2WGlGgKfZRo
+FksFdYwKYXR0cmlidXRlc5R9lCiMCHN1cnZpdmFslEsBjAtzdGlsbF9hbGl2ZZRLAYwTYWdlX2F0
+X2hlYXJ0X2F0dGFja5RLAYwRcGVyaWNhcmRfZWZmdXNpb26USwGMEGZyYWN0X3Nob3J0ZW5pbmeU
+SwGMBGVwc3OUSwGMBGx2ZGSUSwGMEXdhbGxfbW90aW9uX3Njb3JllEsBjBF3YWxsX21vdGlvbl9p
+bmRleJRLAYwEbXVsdJRLAYwKYWxpdmVfYXRfMZRLAXWMBW1ldGFzlH2UKIwHQ2x1c3RlcpRLAYwK
+U2lsaG91ZXR0ZZRLAnV1YmF1Lg==
+</properties>
+		<properties node_id="36" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01o\x00\x00\x00r\x00\x00\x04\x90\x00\x00\x02\xd0\x00\x00\x01p\x00\x00\x00\x90\x00\x00\x04\x8f\x00\x00\x02\xcf\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01p\x00\x00\x00\x90\x00\x00\x04\x8f\x00\x00\x02\xcf', 'scriptLibrary': [{'name': 'New script', 'script': 'from sklearn.cluster import KMeans\nimport numpy as np\n\n# Assuming your data is stored in a numpy array \'data\'\n# Initialize the KMeans model with the desired number of clusters\nkmeans = KMeans(n_clusters=1)\n\n# Fit the KMeans model to your data\nkmeans.fit(data)\n\n# Get the cluster centers and labels\ncluster_centers = kmeans.cluster_centers_\nprint(cluster_centers)\nlabels = kmeans.labels_\n\n# Calculate the sum of squared errors (SSE)\nsse\nfor i in range(len(data)):\n    cluster_center = cluster_centers[labels[i]]\n    sse += np.linalg.norm(data[i] - cluster_center) ** 2\n\nprint("SSE:", sse)', 'filename': None}], 'scriptText': 'import numpy as np\nfrom sklearn.cluster import AgglomerativeClustering\nfrom sklearn.metrics import silhouette_score, davies_bouldin_score\n\n# Accessing data from Orange\'s input\ndata = np.array(in_data)  # \'in_data\' is the variable name representing the input data\n\n# Assuming \'data\' contains your dataset\n# Replace \'data\' with the actual variable name containing your data\n\n# Fit Hierarchical Clustering model\nn_clusters = 2  # Change the number of clusters as needed\nhierarchical_clustering = AgglomerativeClustering(n_clusters=n_clusters)\nlabels = hierarchical_clustering.fit_predict(data)\n\n# Compute Silhouette Score\nsilhouette_avg = silhouette_score(data, labels)\nprint("Silhouette Score:", silhouette_avg)\n\n# Compute Davies-Bouldin Index\ndavies_bouldin = davies_bouldin_score(data, labels)\nprint("Davies-Bouldin Index:", davies_bouldin)\n', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x9d\x00\x00\x00]\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+		<properties node_id="37" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01o\x00\x00\x00r\x00\x00\x04\x90\x00\x00\x02\xd0\x00\x00\x01p\x00\x00\x00\x90\x00\x00\x04\x8f\x00\x00\x02\xcf\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01p\x00\x00\x00\x90\x00\x00\x04\x8f\x00\x00\x02\xcf', 'scriptLibrary': [{'name': 'New script', 'script': 'from sklearn.cluster import KMeans\nimport numpy as np\n\n# Assuming your data is stored in a numpy array \'data\'\n# Initialize the KMeans model with the desired number of clusters\nkmeans = KMeans(n_clusters=1)\n\n# Fit the KMeans model to your data\nkmeans.fit(data)\n\n# Get the cluster centers and labels\ncluster_centers = kmeans.cluster_centers_\nprint(cluster_centers)\nlabels = kmeans.labels_\n\n# Calculate the sum of squared errors (SSE)\nsse\nfor i in range(len(data)):\n    cluster_center = cluster_centers[labels[i]]\n    sse += np.linalg.norm(data[i] - cluster_center) ** 2\n\nprint("SSE:", sse)', 'filename': None}], 'scriptText': 'from sklearn.cluster import KMeans\nimport numpy as np\n\n# Assuming your data is stored in a numpy array \'data\'\n# Initialize the KMeans model with the desired number of clusters\nkmeans = KMeans(n_clusters=1)\n\n# Fit the KMeans model to your data\nkmeans.fit(data)\n\n# Get the cluster centers and labels\ncluster_centers = kmeans.cluster_centers_\nprint(cluster_centers)\nlabels = kmeans.labels_\n\n# Calculate the sum of squared errors (SSE)\nsse\nfor i in range(len(data)):\n    cluster_center = cluster_centers[labels[i]]\n    sse += np.linalg.norm(data[i] - cluster_center) ** 2\n\nprint("SSE:", sse)', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x9d\x00\x00\x00]\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+		<properties node_id="38" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00\x01\x00\x00\x00\x10\x00\x00\x06\x00\x00\x00\x03o\x00\x00\x00\x02\x00\x00\x00.\x00\x00\x05\xff\x00\x00\x03n\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x00\x02\x00\x00\x00.\x00\x00\x05\xff\x00\x00\x03n', 'select_rows': True, 'show_attribute_labels': True, 'show_distributions': False, 'stored_selection': {'rows': [9], 'columns': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]}, 'stored_sort': [], '__version__': 1}</properties>
+		<properties node_id="39" format="literal">{'auto_commit': True, 'controlAreaVisible': True, 'k': 5, 'k_from': 2, 'k_to': 8, 'max_iterations': 100, 'n_init': 15, 'normalize': True, 'optimize_k': False, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\x91\x00\x00\x00\xa8\x00\x00\x03U\x00\x00\x01\xd7\x00\x00\x01\x92\x00\x00\x00\xc6\x00\x00\x03T\x00\x00\x01\xd6\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01\x92\x00\x00\x00\xc6\x00\x00\x03T\x00\x00\x01\xd6', 'selection': None, 'smart_init': 0, '__version__': 2}</properties>
+		<properties node_id="40" format="pickle">gASVTgMAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMC2F1dG9fc2FtcGxllIiMEmNvbnRyb2xBcmVh
+VmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAD/////////+QAABgAAAANg
+AAAAAAAAABcAAAX/AAADXwAAAAACAAAABgAAAAAAAAAAFwAABf8AAANflIwJc2VsZWN0aW9ulE6M
+EXRvb2x0aXBfc2hvd3NfYWxslIiMD3Zpc3VhbF9zZXR0aW5nc5R9lIwFZ3JhcGiUfZQojAthbHBo
+YV92YWx1ZZRLgIwNY2xhc3NfZGVuc2l0eZSIjBFqaXR0ZXJfY29udGludW91c5SJjAtqaXR0ZXJf
+c2l6ZZRLCowTbGFiZWxfb25seV9zZWxlY3RlZJSIjBZvcnRob25vcm1hbF9yZWdyZXNzaW9ulImM
+C3BvaW50X3dpZHRolEsLjAlzaG93X2dyaWSUiYwLc2hvd19sZWdlbmSUiIwNc2hvd19yZWdfbGlu
+ZZSJdYwLX192ZXJzaW9uX1+USwWMEGNvbnRleHRfc2V0dGluZ3OUXZSMFW9yYW5nZXdpZGdldC5z
+ZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9lCiMBnZhbHVlc5R9lCiMCmF0dHJfY29sb3KUjAdDbHVz
+dGVylEtlhpSMCmF0dHJfbGFiZWyUTkr+////hpSMCmF0dHJfc2hhcGWUTkr+////hpSMCWF0dHJf
+c2l6ZZROSv7///+GlIwGYXR0cl94lGghS2WGlIwGYXR0cl95lGghS2WGlGgKfZRoFksFdYwKYXR0
+cmlidXRlc5R9lCiMCHN1cnZpdmFslEsCjAtzdGlsbF9hbGl2ZZRLAYwTYWdlX2F0X2hlYXJ0X2F0
+dGFja5RLAowRcGVyaWNhcmRfZWZmdXNpb26USwGMEGZyYWN0X3Nob3J0ZW5pbmeUSwKMBGVwc3OU
+SwKMBGx2ZGSUSwKMEXdhbGxfbW90aW9uX3Njb3JllEsCjBF3YWxsX21vdGlvbl9pbmRleJRLAowE
+bXVsdJRLAowKYWxpdmVfYXRfMZRLAXWMBW1ldGFzlH2UKGghSwGMClNpbGhvdWV0dGWUSwJ1dWJh
+dS4=
+</properties>
+		<properties node_id="41" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\x1e\x00\x00\x00\x9c\x00\x00\x04?\x00\x00\x02\xfa\x00\x00\x01\x1f\x00\x00\x00\xba\x00\x00\x04&gt;\x00\x00\x02\xf9\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01\x1f\x00\x00\x00\xba\x00\x00\x04&gt;\x00\x00\x02\xf9', 'scriptLibrary': [{'name': 'New script', 'script': 'from sklearn.cluster import KMeans\nimport numpy as np\n\n# Assuming your data is stored in a numpy array \'data\'\n# Initialize the KMeans model with the desired number of clusters\nkmeans = KMeans(n_clusters=1)\n\n# Fit the KMeans model to your data\nkmeans.fit(data)\n\n# Get the cluster centers and labels\ncluster_centers = kmeans.cluster_centers_\nprint(cluster_centers)\nlabels = kmeans.labels_\n\n# Calculate the sum of squared errors (SSE)\nsse\nfor i in range(len(data)):\n    cluster_center = cluster_centers[labels[i]]\n    sse += np.linalg.norm(data[i] - cluster_center) ** 2\n\nprint("SSE:", sse)', 'filename': None}], 'scriptText': 'import numpy as np\nfrom sklearn.cluster import KMeans\nfrom sklearn.metrics import silhouette_score, davies_bouldin_score\n\n# Accessing data from Orange\'s input\ndata = np.array(in_data)  # \'in_data\' is the variable name representing the input data\n\n# Assuming \'data\' contains your dataset\n# Replace \'data\' with the actual variable name containing your data\n\n# Fit K-Means clustering model\nkmeans = KMeans(n_clusters=3)  # Change the number of clusters as needed\nkmeans.fit(data)\n\n# Get cluster labels\nlabels = kmeans.labels_\n\n# Compute Silhouette Score\nsilhouette_avg = silhouette_score(data, labels)\nprint("Silhouette Score:", silhouette_avg)\n\n# Compute Davies-Bouldin Index\ndavies_bouldin = davies_bouldin_score(data, labels)\nprint("Davies-Bouldin Index:", davies_bouldin)\n', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x9d\x00\x00\x00]\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+		<properties node_id="42" format="literal">{'autocommit': True, 'axis': 0, 'controlAreaVisible': True, 'metric_id': 1, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02p\x00\x00\x01\x0c\x00\x00\x03\x8f\x00\x00\x026\x00\x00\x02q\x00\x00\x01*\x00\x00\x03\x8e\x00\x00\x025\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x02q\x00\x00\x01*\x00\x00\x03\x8e\x00\x00\x025', '__version__': 4}</properties>
+		<properties node_id="43" format="pickle">gASVzgIAAAAAAAB9lCiMF2Fubm90YXRpb25faWZfZW51bWVyYXRllIwLRW51bWVyYXRpb26UjBNh
+bm5vdGF0aW9uX2lmX25hbWVzlIwETmFtZZSMCmF1dG9jb21taXSUiIwSY29udHJvbEFyZWFWaXNp
+YmxllIiMCWN1dF9yYXRpb5RHQFLAAAAAAACMEWxhYmVsX29ubHlfc3Vic2V0lImMB2xpbmthZ2WU
+SwSMCW1heF9kZXB0aJRLCowHcHJ1bmluZ5RLAIwTc2F2ZWRXaWRnZXRHZW9tZXRyeZRDQgHZ0MsA
+AwAAAAABkgAAAIAAAARtAAACkgAAAZMAAACeAAAEbAAAApEAAAAAAAAAAAYAAAABkwAAAJ4AAARs
+AAACkZSMEHNlbGVjdGlvbl9tZXRob2SUSwCMBXRvcF9ulEsDjAt6b29tX2ZhY3RvcpRLAIwLX192
+ZXJzaW9uX1+USwKMFF9fc2Vzc2lvbl9zdGF0ZV9kYXRhlH2UjAd2ZXJzaW9ulEsASwBLAIeUc4wQ
+Y29udGV4dF9zZXR0aW5nc5RdlIwVb3Jhbmdld2lkZ2V0LnNldHRpbmdzlIwHQ29udGV4dJSTlCmB
+lH2UKIwGdmFsdWVzlH2UKIwKYW5ub3RhdGlvbpSMEGZyYWN0X3Nob3J0ZW5pbmeUS2aGlIwIY29s
+b3JfYnmUTkr+////hpRoEUsCdYwKYXR0cmlidXRlc5R9lCiMCHN1cnZpdmFslEsCjAtzdGlsbF9h
+bGl2ZZRLAYwTYWdlX2F0X2hlYXJ0X2F0dGFja5RLAowRcGVyaWNhcmRfZWZmdXNpb26USwFoIEsC
+jARlcHNzlEsCjARsdmRklEsCjBF3YWxsX21vdGlvbl9zY29yZZRLAowRd2FsbF9tb3Rpb25faW5k
+ZXiUSwKMBG11bHSUSwKMCmFsaXZlX2F0XzGUSwF1jAVtZXRhc5R9lHViYXUu
+</properties>
+		<properties node_id="44" format="pickle">gASVWwMAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMC2F1dG9fc2FtcGxllIiMEmNvbnRyb2xBcmVh
+VmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAALrAAAAxAAABXkAAAMR
+AAAC7AAAAOIAAAV4AAADEAAAAAAAAAAABgAAAALsAAAA4gAABXgAAAMQlIwJc2VsZWN0aW9ulE6M
+EXRvb2x0aXBfc2hvd3NfYWxslIiMD3Zpc3VhbF9zZXR0aW5nc5R9lIwFZ3JhcGiUfZQojAthbHBo
+YV92YWx1ZZRLgIwNY2xhc3NfZGVuc2l0eZSIjBFqaXR0ZXJfY29udGludW91c5SJjAtqaXR0ZXJf
+c2l6ZZRLCowTbGFiZWxfb25seV9zZWxlY3RlZJSIjBZvcnRob25vcm1hbF9yZWdyZXNzaW9ulImM
+C3BvaW50X3dpZHRolEsLjAlzaG93X2dyaWSUiYwLc2hvd19sZWdlbmSUiIwNc2hvd19yZWdfbGlu
+ZZSJdYwLX192ZXJzaW9uX1+USwWMEGNvbnRleHRfc2V0dGluZ3OUXZSMFW9yYW5nZXdpZGdldC5z
+ZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9lCiMBnZhbHVlc5R9lCiMCmF0dHJfY29sb3KUjAhzdXJ2
+aXZhbJRLZoaUjAphdHRyX2xhYmVslE5K/v///4aUjAphdHRyX3NoYXBllE5K/v///4aUjAlhdHRy
+X3NpemWUTkr+////hpSMBmF0dHJfeJRoIUtmhpSMBmF0dHJfeZSME2FnZV9hdF9oZWFydF9hdHRh
+Y2uUS2aGlGgKfZRoFksFdYwKYXR0cmlidXRlc5R9lCiMCHN1cnZpdmFslEsCjAtzdGlsbF9hbGl2
+ZZRLAYwTYWdlX2F0X2hlYXJ0X2F0dGFja5RLAowRcGVyaWNhcmRfZWZmdXNpb26USwGMEGZyYWN0
+X3Nob3J0ZW5pbmeUSwKMBGVwc3OUSwKMBGx2ZGSUSwKMEXdhbGxfbW90aW9uX3Njb3JllEsCjBF3
+YWxsX21vdGlvbl9pbmRleJRLAowEbXVsdJRLAowKYWxpdmVfYXRfMZRLAYwIU2VsZWN0ZWSUSwF1
+jAVtZXRhc5R9lHViYXUu
+</properties>
+		<properties node_id="45" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01o\x00\x00\x00r\x00\x00\x04\x90\x00\x00\x02\xd0\x00\x00\x01p\x00\x00\x00\x90\x00\x00\x04\x8f\x00\x00\x02\xcf\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01p\x00\x00\x00\x90\x00\x00\x04\x8f\x00\x00\x02\xcf', 'scriptLibrary': [{'name': 'New script', 'script': 'from sklearn.cluster import KMeans\nimport numpy as np\n\n# Assuming your data is stored in a numpy array \'data\'\n# Initialize the KMeans model with the desired number of clusters\nkmeans = KMeans(n_clusters=1)\n\n# Fit the KMeans model to your data\nkmeans.fit(data)\n\n# Get the cluster centers and labels\ncluster_centers = kmeans.cluster_centers_\nprint(cluster_centers)\nlabels = kmeans.labels_\n\n# Calculate the sum of squared errors (SSE)\nsse\nfor i in range(len(data)):\n    cluster_center = cluster_centers[labels[i]]\n    sse += np.linalg.norm(data[i] - cluster_center) ** 2\n\nprint("SSE:", sse)', 'filename': None}], 'scriptText': 'import numpy as np\nfrom sklearn.cluster import AgglomerativeClustering\nfrom sklearn.metrics import silhouette_score, davies_bouldin_score\n\n# Accessing data from Orange\'s input\ndata = np.array(in_data)  # \'in_data\' is the variable name representing the input data\n\n# Assuming \'data\' contains your dataset\n# Replace \'data\' with the actual variable name containing your data\n\n# Fit Hierarchical Clustering model\nn_clusters = 2  # Change the number of clusters as needed\nhierarchical_clustering = AgglomerativeClustering(n_clusters=n_clusters)\nlabels = hierarchical_clustering.fit_predict(data)\n\n# Compute Silhouette Score\nsilhouette_avg = silhouette_score(data, labels)\nprint("Silhouette Score:", silhouette_avg)\n\n# Compute Davies-Bouldin Index\ndavies_bouldin = davies_bouldin_score(data, labels)\nprint("Davies-Bouldin Index:", davies_bouldin)\n', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x9d\x00\x00\x00]\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+		<properties node_id="46" format="literal">{'autocommit': True, 'axis': 0, 'controlAreaVisible': True, 'metric_id': 1, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02p\x00\x00\x01\x0c\x00\x00\x03\x8f\x00\x00\x026\x00\x00\x02q\x00\x00\x01*\x00\x00\x03\x8e\x00\x00\x025\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x02q\x00\x00\x01*\x00\x00\x03\x8e\x00\x00\x025', '__version__': 4}</properties>
+		<properties node_id="47" format="pickle">gASVGwQAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZl
+ZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAAFvAAAAgAAABJAAAAKSAAABcAAAAJ4AAASPAAAC
+kQAAAAAAAAAABgAAAAFwAAAAngAABI8AAAKRlIwLX192ZXJzaW9uX1+USwKMEGNvbnRleHRfc2V0
+dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1
+ZXOUfZRoBUsCc4wFc2hhcGWUS3lLeYaUjAlzeW1tZXRyaWOUiIwLYW5ub3RhdGlvbnOUXZQojARO
+b25llIwJRW51bWVyYXRllIwIc3Vydml2YWyUjAtzdGlsbF9hbGl2ZZSME2FnZV9hdF9oZWFydF9h
+dHRhY2uUjBFwZXJpY2FyZF9lZmZ1c2lvbpSMEGZyYWN0X3Nob3J0ZW5pbmeUjARlcHNzlIwEbHZk
+ZJSMEXdhbGxfbW90aW9uX3Njb3JllIwRd2FsbF9tb3Rpb25faW5kZXiUjARtdWx0lIwKYWxpdmVf
+YXRfMZRljAphbm5vdGF0aW9ulIwJRW51bWVyYXRllIwJc2VsZWN0aW9ulF2UdWJoCimBlH2UKGgN
+fZRoBUsCc2gPSzpLOoaUaBGIaBJdlCiMBE5vbmWUjAlFbnVtZXJhdGWUjAhzdXJ2aXZhbJSMC3N0
+aWxsX2FsaXZllIwTYWdlX2F0X2hlYXJ0X2F0dGFja5SMEXBlcmljYXJkX2VmZnVzaW9ulIwQZnJh
+Y3Rfc2hvcnRlbmluZ5SMBGVwc3OUjARsdmRklIwRd2FsbF9tb3Rpb25fc2NvcmWUjBF3YWxsX21v
+dGlvbl9pbmRleJSMBG11bHSUjAphbGl2ZV9hdF8xlGVoIYwJRW51bWVyYXRllGgjXZR1YmgKKYGU
+fZQoaA19lGgFSwJzaA9LhEuEhpRoEYhoEl2UKGgUaBVoFmgXaBhoGWgaaBtoHGgdaB5oH2ggjAdP
+dXRsaWVylGVoIYwJRW51bWVyYXRllGgjXZR1YmgKKYGUfZQoaA19lGgFSwJzaA9LhEuEhpRoEYho
+El2UKIwETm9uZZSMCUVudW1lcmF0ZZSMCHN1cnZpdmFslIwLc3RpbGxfYWxpdmWUjBNhZ2VfYXRf
+aGVhcnRfYXR0YWNrlIwRcGVyaWNhcmRfZWZmdXNpb26UjBBmcmFjdF9zaG9ydGVuaW5nlIwEZXBz
+c5SMBGx2ZGSUjBF3YWxsX21vdGlvbl9zY29yZZSMEXdhbGxfbW90aW9uX2luZGV4lIwEbXVsdJSM
+CmFsaXZlX2F0XzGUZWghjAlFbnVtZXJhdGWUaCNdlHViZXUu
+</properties>
+		<properties node_id="48" format="pickle">gASVYgQAAAAAAAB9lCiMF2Fubm90YXRpb25faWZfZW51bWVyYXRllIwLRW51bWVyYXRpb26UjBNh
+bm5vdGF0aW9uX2lmX25hbWVzlIwETmFtZZSMCmF1dG9jb21taXSUiIwSY29udHJvbEFyZWFWaXNp
+YmxllIiMCWN1dF9yYXRpb5RHQFLAAAAAAACMEWxhYmVsX29ubHlfc3Vic2V0lImMB2xpbmthZ2WU
+SwSMCW1heF9kZXB0aJRLCowHcHJ1bmluZ5RLAIwTc2F2ZWRXaWRnZXRHZW9tZXRyeZRDQgHZ0MsA
+AwAAAAABkgAAAAAAAAThAAADXwAAAZMAAAAeAAAE4AAAA14AAAAAAAAAAAYAAAABkwAAAB4AAATg
+AAADXpSMEHNlbGVjdGlvbl9tZXRob2SUSwCMBXRvcF9ulEsDjAt6b29tX2ZhY3RvcpRLAIwLX192
+ZXJzaW9uX1+USwKMFF9fc2Vzc2lvbl9zdGF0ZV9kYXRhlH2UjAd2ZXJzaW9ulEsASwBLAIeUc4wQ
+Y29udGV4dF9zZXR0aW5nc5RdlCiMFW9yYW5nZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5Qp
+gZR9lCiMBnZhbHVlc5R9lCiMCmFubm90YXRpb26UjAphbGl2ZV9hdF8xlEtlhpSMCGNvbG9yX2J5
+lE5K/v///4aUaBFLAnWMCmF0dHJpYnV0ZXOUfZQojAhzdXJ2aXZhbJRLAYwLc3RpbGxfYWxpdmWU
+SwGME2FnZV9hdF9oZWFydF9hdHRhY2uUSwGMEXBlcmljYXJkX2VmZnVzaW9ulEsBjBBmcmFjdF9z
+aG9ydGVuaW5nlEsBjARlcHNzlEsBjARsdmRklEsBjBF3YWxsX21vdGlvbl9zY29yZZRLAYwRd2Fs
+bF9tb3Rpb25faW5kZXiUSwGMBG11bHSUSwGMCmFsaXZlX2F0XzGUSwF1jAVtZXRhc5R9lHViaBop
+gZR9lChoHX2UKIwKYW5ub3RhdGlvbpSMEGZyYWN0X3Nob3J0ZW5pbmeUS2aGlIwIY29sb3JfYnmU
+Tkr+////hpRoEUsCdWgkfZQoaCZLAmgnSwFoKEsCaClLAWgqSwJoK0sCaCxLAmgtSwJoLksCaC9L
+AmgwSwF1aDF9lHViaBopgZR9lChoHX2UKIwKYW5ub3RhdGlvbpSMEGZyYWN0X3Nob3J0ZW5pbmeU
+S2aGlIwIY29sb3JfYnmUTkr+////hpRoEUsCdWgkfZQojAhzdXJ2aXZhbJRLAowLc3RpbGxfYWxp
+dmWUSwGME2FnZV9hdF9oZWFydF9hdHRhY2uUSwKMEXBlcmljYXJkX2VmZnVzaW9ulEsBaEFLAowE
+ZXBzc5RLAowEbHZkZJRLAowRd2FsbF9tb3Rpb25fc2NvcmWUSwKMEXdhbGxfbW90aW9uX2luZGV4
+lEsCjARtdWx0lEsCjAphbGl2ZV9hdF8xlEsBdWgxfZSMB091dGxpZXKUSwFzdWJldS4=
+</properties>
+		<properties node_id="49" format="pickle">gASVZQYAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMC2F1dG9fc2FtcGxllIiMEmNvbnRyb2xBcmVh
+VmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAAK5AAAAwgAABZQAAAK+
+AAACugAAAOAAAAWTAAACvQAAAAAAAAAABgAAAAK6AAAA4AAABZMAAAK9lIwJc2VsZWN0aW9ulE6M
+EXRvb2x0aXBfc2hvd3NfYWxslIiMD3Zpc3VhbF9zZXR0aW5nc5R9lIwFZ3JhcGiUfZQojAthbHBo
+YV92YWx1ZZRLaIwNY2xhc3NfZGVuc2l0eZSIjBFqaXR0ZXJfY29udGludW91c5SJjAtqaXR0ZXJf
+c2l6ZZRLCowTbGFiZWxfb25seV9zZWxlY3RlZJSJjBZvcnRob25vcm1hbF9yZWdyZXNzaW9ulImM
+C3BvaW50X3dpZHRolEsQjAlzaG93X2dyaWSUiYwLc2hvd19sZWdlbmSUiIwNc2hvd19yZWdfbGlu
+ZZSJdYwLX192ZXJzaW9uX1+USwWMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQu
+c2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojAphdHRyX2NvbG9ylIwHQ2x1
+c3RlcpRLZYaUjAphdHRyX2xhYmVslE5K/v///4aUjAphdHRyX3NoYXBllE5K/v///4aUjAlhdHRy
+X3NpemWUTkr+////hpSMBmF0dHJfeJRoIUtlhpSMBmF0dHJfeZRoIUtlhpRoCn2UaBZLBXWMCmF0
+dHJpYnV0ZXOUfZQojAhzdXJ2aXZhbJRLAYwLc3RpbGxfYWxpdmWUSwGME2FnZV9hdF9oZWFydF9h
+dHRhY2uUSwGMEXBlcmljYXJkX2VmZnVzaW9ulEsBjBBmcmFjdF9zaG9ydGVuaW5nlEsBjARlcHNz
+lEsBjARsdmRklEsBjBF3YWxsX21vdGlvbl9zY29yZZRLAYwRd2FsbF9tb3Rpb25faW5kZXiUSwGM
+BG11bHSUSwGMCmFsaXZlX2F0XzGUSwF1jAVtZXRhc5R9lCiMB0NsdXN0ZXKUSwGMClNpbGhvdWV0
+dGWUSwJ1dWJoGymBlH2UKGgefZQojAphdHRyX2NvbG9ylIwHQ2x1c3RlcpRLZYaUjAphdHRyX2xh
+YmVslE5K/v///4aUjAphdHRyX3NoYXBllE5K/v///4aUjAlhdHRyX3NpemWUTkr+////hpSMBmF0
+dHJfeJRoQ0tlhpSMBmF0dHJfeZRoQ0tlhpSMBWdyYXBolH2UaBZLBXVoLn2UKGgwSwJoMUsBaDJL
+AmgzSwFoNEsCaDVLAmg2SwJoN0sCaDhLAmg5SwJoOksBdWg7fZQoaD1LAWg+SwJ1dWJoGymBlH2U
+KGgefZQojAphdHRyX2NvbG9ylIwHQ2x1c3RlcpRLZYaUjAphdHRyX2xhYmVslE5K/v///4aUjAph
+dHRyX3NoYXBllE5K/v///4aUjAlhdHRyX3NpemWUTkr+////hpSMBmF0dHJfeJRoV0tlhpSMBmF0
+dHJfeZRoV0tlhpSMBWdyYXBolH2UaBZLBXVoLn2UKIwIc3Vydml2YWyUSwKMC3N0aWxsX2FsaXZl
+lEsBjBNhZ2VfYXRfaGVhcnRfYXR0YWNrlEsCjBFwZXJpY2FyZF9lZmZ1c2lvbpRLAYwQZnJhY3Rf
+c2hvcnRlbmluZ5RLAowEZXBzc5RLAowEbHZkZJRLAowRd2FsbF9tb3Rpb25fc2NvcmWUSwKMEXdh
+bGxfbW90aW9uX2luZGV4lEsCjARtdWx0lEsCjAphbGl2ZV9hdF8xlEsBdWg7fZQojAdPdXRsaWVy
+lEsBaFdLAYwKU2lsaG91ZXR0ZZRLAnV1YmgbKYGUfZQoaB59lCiMCmF0dHJfY29sb3KUaDFLZYaU
+jAphdHRyX2xhYmVslE5K/v///4aUjAphdHRyX3NoYXBllE5K/v///4aUjAlhdHRyX3NpemWUTkr+
+////hpSMBmF0dHJfeJRoMUtlhpSMBmF0dHJfeZRoNktlhpSMBWdyYXBolH2UaBZLBXVoLn2UKGgw
+SwFoMUsBaDJLAWgzSwFoNEsBaDVLAWg2SwFoN0sBaDhLAWg5SwFoOksBdWg7fZR1YmV1Lg==
+</properties>
+		<properties node_id="50" format="literal">{'auto_commit': True, 'controlAreaVisible': True, 'k': 5, 'k_from': 2, 'k_to': 13, 'max_iterations': 100, 'n_init': 15, 'normalize': True, 'optimize_k': 1, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\x91\x00\x00\x00\xa8\x00\x00\x03Q\x00\x00\x01\xd7\x00\x00\x01\x92\x00\x00\x00\xc6\x00\x00\x03P\x00\x00\x01\xd6\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01\x92\x00\x00\x00\xc6\x00\x00\x03P\x00\x00\x01\xd6', 'selection': 3, 'smart_init': 0, '__version__': 2}</properties>
+		<properties node_id="51" format="pickle">gASVnwUAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMC2F1dG9fc2FtcGxllIiMEmNvbnRyb2xBcmVh
+VmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAD/////////+QAABgAAAANg
+AAAAAAAAABcAAAX/AAADXwAAAAACAAAABgAAAAAAAAAAFwAABf8AAANflIwJc2VsZWN0aW9ulE6M
+EXRvb2x0aXBfc2hvd3NfYWxslIiMD3Zpc3VhbF9zZXR0aW5nc5R9lIwFZ3JhcGiUfZQojAthbHBo
+YV92YWx1ZZRLgIwNY2xhc3NfZGVuc2l0eZSIjBFqaXR0ZXJfY29udGludW91c5SJjAtqaXR0ZXJf
+c2l6ZZRLCowTbGFiZWxfb25seV9zZWxlY3RlZJSIjBZvcnRob25vcm1hbF9yZWdyZXNzaW9ulImM
+C3BvaW50X3dpZHRolEsHjAlzaG93X2dyaWSUiIwLc2hvd19sZWdlbmSUiIwNc2hvd19yZWdfbGlu
+ZZSJdYwLX192ZXJzaW9uX1+USwWMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQu
+c2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojAphdHRyX2NvbG9ylIwIc3Vy
+dml2YWyUS2WGlIwKYXR0cl9sYWJlbJROSv7///+GlIwKYXR0cl9zaGFwZZROSv7///+GlIwJYXR0
+cl9zaXpllE5K/v///4aUjAZhdHRyX3iUaCFLZYaUjAZhdHRyX3mUjAtzdGlsbF9hbGl2ZZRLZYaU
+aAp9lGgWSwV1jAphdHRyaWJ1dGVzlH2UKIwIc3Vydml2YWyUSwGMC3N0aWxsX2FsaXZllEsBjBNh
+Z2VfYXRfaGVhcnRfYXR0YWNrlEsBjBFwZXJpY2FyZF9lZmZ1c2lvbpRLAYwQZnJhY3Rfc2hvcnRl
+bmluZ5RLAYwEZXBzc5RLAYwEbHZkZJRLAYwRd2FsbF9tb3Rpb25fc2NvcmWUSwGMEXdhbGxfbW90
+aW9uX2luZGV4lEsBjARtdWx0lEsBjAphbGl2ZV9hdF8xlEsBjAhTZWxlY3RlZJRLAXWMBW1ldGFz
+lH2UdWJoGymBlH2UKGgefZQojAphdHRyX2NvbG9ylIwIc3Vydml2YWyUS2aGlIwKYXR0cl9sYWJl
+bJROSv7///+GlIwKYXR0cl9zaGFwZZROSv7///+GlIwJYXR0cl9zaXpllE5K/v///4aUjAZhdHRy
+X3iUaENLZoaUjAZhdHRyX3mUjBNhZ2VfYXRfaGVhcnRfYXR0YWNrlEtmhpSMBWdyYXBolH2UaBZL
+BXVoL32UKGgxSwJoMksBaDNLAmg0SwFoNUsCaDZLAmg3SwJoOEsCaDlLAmg6SwJoO0sBaDxLAXVo
+PX2UdWJoGymBlH2UKGgefZQojAphdHRyX2NvbG9ylIwIc3Vydml2YWyUS2aGlIwKYXR0cl9sYWJl
+bJROSv7///+GlIwKYXR0cl9zaGFwZZROSv7///+GlIwJYXR0cl9zaXpllE5K/v///4aUjAZhdHRy
+X3iUaFhLZoaUjAZhdHRyX3mUjBNhZ2VfYXRfaGVhcnRfYXR0YWNrlEtmhpSMBWdyYXBolH2UaBZL
+BXVoL32UKGhYSwKMC3N0aWxsX2FsaXZllEsBaGNLAowRcGVyaWNhcmRfZWZmdXNpb26USwGMEGZy
+YWN0X3Nob3J0ZW5pbmeUSwKMBGVwc3OUSwKMBGx2ZGSUSwKMEXdhbGxfbW90aW9uX3Njb3JllEsC
+jBF3YWxsX21vdGlvbl9pbmRleJRLAowEbXVsdJRLAowKYWxpdmVfYXRfMZRLAYwIU2VsZWN0ZWSU
+SwF1aD19lIwHT3V0bGllcpRLAXN1YmV1Lg==
+</properties>
+		<properties node_id="52" format="pickle">gASVpAIAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5
+lENCAdnQywADAAD/////////+QAABgAAAANgAAAAAAAAABcAAAX/AAADLwAAAAACAAAABgAAAAAA
+AAAAFwAABf8AAANflIwJc2VsZWN0aW9ulF2UjAtzaG93X3Njb3Jlc5SIjAtzY29yZV90YWJsZZR9
+lIwQc2hvd19zY29yZV9oaW50c5R9lCiMBk1vZGVsX5SIjAZUcmFpbl+UiYwFVGVzdF+UiYwCQ0GU
+iIwXUHJlY2lzaW9uUmVjYWxsRlN1cHBvcnSUiIwLVGFyZ2V0U2NvcmWUiIwJUHJlY2lzaW9ulIiM
+BlJlY2FsbJSIjAJGMZSIjANBVUOUiIwHTG9nTG9zc5SJjAtTcGVjaWZpY2l0eZSJjBdNYXR0aGV3
+c0NvcnJDb2VmZmljaWVudJSIjANNU0WUiIwEUk1TRZSIjANNQUWUiIwETUFQRZSIjAJSMpSIjAZD
+VlJNU0WUiYwPQ2x1c3RlcmluZ1Njb3JllIiMClNpbGhvdWV0dGWUiIwXQWRqdXN0ZWRNdXR1YWxJ
+bmZvU2NvcmWUiHVzjAtfX3ZlcnNpb25fX5RLAowQY29udGV4dF9zZXR0aW5nc5RdlIwVb3Jhbmdl
+d2lkZ2V0LnNldHRpbmdzlIwHQ29udGV4dJSTlCmBlH2UKIwGdmFsdWVzlH2UKIwXc2hvd19wcm9i
+YWJpbGl0eV9lcnJvcnOUiIwPc2hvd19yZWdfZXJyb3JzlEsBjAtzaG93bl9wcm9ic5RLAIwMdGFy
+Z2V0X2NsYXNzlIwWKEF2ZXJhZ2Ugb3ZlciBjbGFzc2VzKZRoB32UaCFLAnWMB2NsYXNzZXOUKXVi
+YXUu
+</properties>
+		<properties node_id="53" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00\xdd\x00\x00\x00o\x00\x00\x04T\x00\x00\x02\xcd\x00\x00\x00\xde\x00\x00\x00\x8d\x00\x00\x04S\x00\x00\x02\xcc\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x00\xde\x00\x00\x00\x8d\x00\x00\x04S\x00\x00\x02\xcc', 'scriptLibrary': [{'name': 'Table from numpy', 'script': 'from sklearn.cluster import KMeans\nimport numpy as np\n\ndata = np.array(in_data)\n# Assuming your data is stored in a numpy array \'data\'\n# Initialize the KMeans model with the desired number of clusters\nkmeans = KMeans(n_clusters=1)\n\n# Fit the KMeans model to your data\nkmeans.fit(data)\n\n# Get the cluster centers and labels\ncluster_centers = kmeans.cluster_centers_\nprint(cluster_centers)\nlabels = kmeans.labels_\n\n# Calculate the sum of squared errors (SSE)\nsse\nfor i in range(len(data)):\n    cluster_center = cluster_centers[labels[i]]\n    sse += np.linalg.norm(data[i] - cluster_center) ** 2\n\nprint("SSE:", sse)', 'filename': None}], 'scriptText': 'import numpy as np\nfrom sklearn.cluster import AgglomerativeClustering\nfrom sklearn.metrics import silhouette_score, davies_bouldin_score\n\n# Accessing data from Orange\'s input\ndata = np.array(in_data)  # \'in_data\' is the variable name representing the input data\n\n# Assuming \'data\' contains your dataset\n# Replace \'data\' with the actual variable name containing your data\n\n# Fit Hierarchical Clustering model\nn_clusters = 2  # Change the number of clusters as needed\nhierarchical_clustering = AgglomerativeClustering(n_clusters=n_clusters)\nlabels = hierarchical_clustering.fit_predict(data)\n\n# Compute Silhouette Score\nsilhouette_avg = silhouette_score(data, labels)\nprint("Silhouette Score:", silhouette_avg)\n\n# Compute Davies-Bouldin Index\ndavies_bouldin = davies_bouldin_score(data, labels)\nprint("Davies-Bouldin Index:", davies_bouldin)\n', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x9d\x00\x00\x00]\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+		<properties node_id="54" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01o\x00\x00\x00r\x00\x00\x04\x90\x00\x00\x02\xd0\x00\x00\x01p\x00\x00\x00\x90\x00\x00\x04\x8f\x00\x00\x02\xcf\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01p\x00\x00\x00\x90\x00\x00\x04\x8f\x00\x00\x02\xcf', 'scriptLibrary': [{'name': 'New script', 'script': 'import numpy as np\n\n# Function to calculate Euclidean distance\ndef euclidean_distance(point1, point2):\n    return np.sqrt(np.sum((point1 - point2) ** 2))\n\n# Function to calculate sum of squared error distance\ndef sum_of_squared_error(data, centroids):\n    sse = 0\n    for i, point in enumerate(data):\n        centroid = centroids[i]\n        sse += euclidean_distance(point, centroid) ** 2\n    return sse\n\n# Convert the dataset to a numpy array\ndata = np.array([\n    [1, 3, 1, 1, 2, 1, 2, 0, 0, 0],\n    # Add more data points here...\n])\n\n# Example centroids\ncentroids = np.array([\n    [1, 2, 1, 1, 2, 1, 2, 0, 0, 0],\n    # Add more centroids here...\n])\n\n\n# Calculate the sum of squared error distance\nsse = sum_of_squared_error(data, centroids)\nprint("Sum of Squared Error Distance:", sse)', 'filename': None}], 'scriptText': 'import numpy as np\nfrom sklearn.cluster import KMeans\nfrom sklearn.metrics import silhouette_score, davies_bouldin_score\n\n# Accessing data from Orange\'s input\ndata = np.array(in_data)  # \'in_data\' is the variable name representing the input data\n\n# Assuming \'data\' contains your dataset\n# Replace \'data\' with the actual variable name containing your data\n\n# Fit K-Means clustering model\nkmeans = KMeans(n_clusters=3)  # Change the number of clusters as needed\nkmeans.fit(data)\n\n# Get cluster labels\nlabels = kmeans.labels_\n\n# Compute Silhouette Score\nsilhouette_avg = silhouette_score(data, labels)\nprint("Silhouette Score:", silhouette_avg)\n\n# Compute Davies-Bouldin Index\ndavies_bouldin = davies_bouldin_score(data, labels)\nprint("Davies-Bouldin Index:", davies_bouldin)\n', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x9d\x00\x00\x00]\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+		<properties node_id="55" format="pickle">gASV7QAAAAAAAAB9lCiMCGF1dG9zZW5klIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZlZFdp
+ZGdldEdlb21ldHJ5lENCAdnQywADAAAAAAHVAAAAgAAABCoAAAKSAAAB1gAAAJ4AAAQpAAACkQAA
+AAAAAAAABgAAAAHWAAAAngAABCkAAAKRlIwJdmFyX2hpbnRzlH2UTowgT3JhbmdlLndpZGdldHMu
+ZGF0YS5vd2Rpc2NyZXRpemWUjAdWYXJIaW50lJOUaAeMB01ldGhvZHOUk5RLB4WUUpRLAoWUhpSB
+lHOMC19fdmVyc2lvbl9flEsDdS4=
+</properties>
+		<properties node_id="56" format="pickle">gASV2AIAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZl
+ZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAAFvAAAAgAAABJAAAAKSAAABcAAAAJ4AAASPAAAC
+kQAAAAAAAAAABgAAAAFwAAAAngAABI8AAAKRlIwLX192ZXJzaW9uX1+USwKMEGNvbnRleHRfc2V0
+dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1
+ZXOUfZRoBUsCc4wFc2hhcGWUS3hLeIaUjAlzeW1tZXRyaWOUiIwLYW5ub3RhdGlvbnOUXZQojARO
+b25llIwJRW51bWVyYXRllIwIc3Vydml2YWyUjAtzdGlsbF9hbGl2ZZSME2FnZV9hdF9oZWFydF9h
+dHRhY2uUjBFwZXJpY2FyZF9lZmZ1c2lvbpSMEGZyYWN0X3Nob3J0ZW5pbmeUjARlcHNzlIwEbHZk
+ZJSMEXdhbGxfbW90aW9uX3Njb3JllIwRd2FsbF9tb3Rpb25faW5kZXiUjARtdWx0lIwKYWxpdmVf
+YXRfMZRljAphbm5vdGF0aW9ulIwJRW51bWVyYXRllIwJc2VsZWN0aW9ulF2UdWJoCimBlH2UKGgN
+fZRoBUsCc2gPSzdLN4aUaBGIaBJdlCiMBE5vbmWUjAlFbnVtZXJhdGWUjAhzdXJ2aXZhbJSMC3N0
+aWxsX2FsaXZllIwTYWdlX2F0X2hlYXJ0X2F0dGFja5SMEXBlcmljYXJkX2VmZnVzaW9ulIwQZnJh
+Y3Rfc2hvcnRlbmluZ5SMBGVwc3OUjARsdmRklIwRd2FsbF9tb3Rpb25fc2NvcmWUjBF3YWxsX21v
+dGlvbl9pbmRleJSMBG11bHSUjAphbGl2ZV9hdF8xlGVoIYwJRW51bWVyYXRllGgjXZR1YmV1Lg==
+</properties>
+		<properties node_id="57" format="pickle">gASV2AIAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZl
+ZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAAFvAAAAgAAABJAAAAKSAAABcAAAAJ4AAASPAAAC
+kQAAAAAAAAAABgAAAAFwAAAAngAABI8AAAKRlIwLX192ZXJzaW9uX1+USwKMEGNvbnRleHRfc2V0
+dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1
+ZXOUfZRoBUsCc4wFc2hhcGWUS3lLeYaUjAlzeW1tZXRyaWOUiIwLYW5ub3RhdGlvbnOUXZQojARO
+b25llIwJRW51bWVyYXRllIwIc3Vydml2YWyUjAtzdGlsbF9hbGl2ZZSME2FnZV9hdF9oZWFydF9h
+dHRhY2uUjBFwZXJpY2FyZF9lZmZ1c2lvbpSMEGZyYWN0X3Nob3J0ZW5pbmeUjARlcHNzlIwEbHZk
+ZJSMEXdhbGxfbW90aW9uX3Njb3JllIwRd2FsbF9tb3Rpb25faW5kZXiUjARtdWx0lIwKYWxpdmVf
+YXRfMZRljAphbm5vdGF0aW9ulIwJRW51bWVyYXRllIwJc2VsZWN0aW9ulF2UdWJoCimBlH2UKGgN
+fZRoBUsCc2gPSzpLOoaUaBGIaBJdlCiMBE5vbmWUjAlFbnVtZXJhdGWUjAhzdXJ2aXZhbJSMC3N0
+aWxsX2FsaXZllIwTYWdlX2F0X2hlYXJ0X2F0dGFja5SMEXBlcmljYXJkX2VmZnVzaW9ulIwQZnJh
+Y3Rfc2hvcnRlbmluZ5SMBGVwc3OUjARsdmRklIwRd2FsbF9tb3Rpb25fc2NvcmWUjBF3YWxsX21v
+dGlvbl9pbmRleJSMBG11bHSUjAphbGl2ZV9hdF8xlGVoIYwJRW51bWVyYXRllGgjXZR1YmV1Lg==
+</properties>
+		<properties node_id="58" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00\xef\x00\x00\x00B\x00\x00\x04\x10\x00\x00\x02@\x00\x00\x00\xf0\x00\x00\x00`\x00\x00\x04\x0f\x00\x00\x02?\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x00\xf0\x00\x00\x00`\x00\x00\x04\x0f\x00\x00\x02?', 'select_rows': True, 'show_attribute_labels': True, 'show_distributions': False, 'stored_selection': {'rows': [], 'columns': []}, 'stored_sort': [], '__version__': 1}</properties>
+		<properties node_id="59" format="literal">{'auto_commit': True, 'controlAreaVisible': True, 'k': 5, 'k_from': 2, 'k_to': 8, 'max_iterations': 100, 'n_init': 15, 'normalize': True, 'optimize_k': False, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\x91\x00\x00\x00\xa8\x00\x00\x03U\x00\x00\x01\xd7\x00\x00\x01\x92\x00\x00\x00\xc6\x00\x00\x03T\x00\x00\x01\xd6\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01\x92\x00\x00\x00\xc6\x00\x00\x03T\x00\x00\x01\xd6', 'selection': None, 'smart_init': 0, '__version__': 2}</properties>
+		<properties node_id="60" format="pickle">gASVTgMAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMC2F1dG9fc2FtcGxllIiMEmNvbnRyb2xBcmVh
+VmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAD/////////+QAABgAAAANg
+AAAAAAAAABcAAAX/AAADXwAAAAACAAAABgAAAAAAAAAAFwAABf8AAANflIwJc2VsZWN0aW9ulE6M
+EXRvb2x0aXBfc2hvd3NfYWxslIiMD3Zpc3VhbF9zZXR0aW5nc5R9lIwFZ3JhcGiUfZQojAthbHBo
+YV92YWx1ZZRLgIwNY2xhc3NfZGVuc2l0eZSIjBFqaXR0ZXJfY29udGludW91c5SJjAtqaXR0ZXJf
+c2l6ZZRLCowTbGFiZWxfb25seV9zZWxlY3RlZJSIjBZvcnRob25vcm1hbF9yZWdyZXNzaW9ulImM
+C3BvaW50X3dpZHRolEsLjAlzaG93X2dyaWSUiYwLc2hvd19sZWdlbmSUiIwNc2hvd19yZWdfbGlu
+ZZSJdYwLX192ZXJzaW9uX1+USwWMEGNvbnRleHRfc2V0dGluZ3OUXZSMFW9yYW5nZXdpZGdldC5z
+ZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9lCiMBnZhbHVlc5R9lCiMCmF0dHJfY29sb3KUjAdDbHVz
+dGVylEtlhpSMCmF0dHJfbGFiZWyUTkr+////hpSMCmF0dHJfc2hhcGWUTkr+////hpSMCWF0dHJf
+c2l6ZZROSv7///+GlIwGYXR0cl94lGghS2WGlIwGYXR0cl95lGghS2WGlGgKfZRoFksFdYwKYXR0
+cmlidXRlc5R9lCiMCHN1cnZpdmFslEsCjAtzdGlsbF9hbGl2ZZRLAYwTYWdlX2F0X2hlYXJ0X2F0
+dGFja5RLAowRcGVyaWNhcmRfZWZmdXNpb26USwGMEGZyYWN0X3Nob3J0ZW5pbmeUSwKMBGVwc3OU
+SwKMBGx2ZGSUSwKMEXdhbGxfbW90aW9uX3Njb3JllEsCjBF3YWxsX21vdGlvbl9pbmRleJRLAowE
+bXVsdJRLAowKYWxpdmVfYXRfMZRLAXWMBW1ldGFzlH2UKGghSwGMClNpbGhvdWV0dGWUSwJ1dWJh
+dS4=
+</properties>
+		<properties node_id="61" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01o\x00\x00\x00r\x00\x00\x04\x90\x00\x00\x02\xd0\x00\x00\x01p\x00\x00\x00\x90\x00\x00\x04\x8f\x00\x00\x02\xcf\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01p\x00\x00\x00\x90\x00\x00\x04\x8f\x00\x00\x02\xcf', 'scriptLibrary': [{'name': 'New script', 'script': 'from sklearn.cluster import KMeans\nimport numpy as np\n\n# Assuming your data is stored in a numpy array \'data\'\n# Initialize the KMeans model with the desired number of clusters\nkmeans = KMeans(n_clusters=1)\n\n# Fit the KMeans model to your data\nkmeans.fit(data)\n\n# Get the cluster centers and labels\ncluster_centers = kmeans.cluster_centers_\nprint(cluster_centers)\nlabels = kmeans.labels_\n\n# Calculate the sum of squared errors (SSE)\nsse\nfor i in range(len(data)):\n    cluster_center = cluster_centers[labels[i]]\n    sse += np.linalg.norm(data[i] - cluster_center) ** 2\n\nprint("SSE:", sse)', 'filename': None}], 'scriptText': 'import numpy as np\nfrom sklearn.cluster import KMeans\nfrom sklearn.metrics import silhouette_score, davies_bouldin_score\n\n# Accessing data from Orange\'s input\ndata = np.array(in_data)  # \'in_data\' is the variable name representing the input data\n\n# Assuming \'data\' contains your dataset\n# Replace \'data\' with the actual variable name containing your data\n\n# Fit K-Means clustering model\nkmeans = KMeans(n_clusters=3)  # Change the number of clusters as needed\nkmeans.fit(data)\n\n# Get cluster labels\nlabels = kmeans.labels_\n\n# Compute Silhouette Score\nsilhouette_avg = silhouette_score(data, labels)\nprint("Silhouette Score:", silhouette_avg)\n\n# Compute Davies-Bouldin Index\ndavies_bouldin = davies_bouldin_score(data, labels)\nprint("Davies-Bouldin Index:", davies_bouldin)\n', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x9d\x00\x00\x00]\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+		<properties node_id="62" format="literal">{'autocommit': True, 'axis': 0, 'controlAreaVisible': True, 'metric_id': 1, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02p\x00\x00\x01\x0c\x00\x00\x03\x8f\x00\x00\x026\x00\x00\x02q\x00\x00\x01*\x00\x00\x03\x8e\x00\x00\x025\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x02q\x00\x00\x01*\x00\x00\x03\x8e\x00\x00\x025', '__version__': 4}</properties>
+		<properties node_id="63" format="pickle">gASVzgIAAAAAAAB9lCiMF2Fubm90YXRpb25faWZfZW51bWVyYXRllIwLRW51bWVyYXRpb26UjBNh
+bm5vdGF0aW9uX2lmX25hbWVzlIwETmFtZZSMCmF1dG9jb21taXSUiIwSY29udHJvbEFyZWFWaXNp
+YmxllIiMCWN1dF9yYXRpb5RHQFLAAAAAAACMEWxhYmVsX29ubHlfc3Vic2V0lImMB2xpbmthZ2WU
+SwSMCW1heF9kZXB0aJRLCowHcHJ1bmluZ5RLAIwTc2F2ZWRXaWRnZXRHZW9tZXRyeZRDQgHZ0MsA
+AwAAAAABkgAAAIAAAARtAAACkgAAAZMAAACeAAAEbAAAApEAAAAAAAAAAAYAAAABkwAAAJ4AAARs
+AAACkZSMEHNlbGVjdGlvbl9tZXRob2SUSwCMBXRvcF9ulEsDjAt6b29tX2ZhY3RvcpRLAIwLX192
+ZXJzaW9uX1+USwKMFF9fc2Vzc2lvbl9zdGF0ZV9kYXRhlH2UjAd2ZXJzaW9ulEsASwBLAIeUc4wQ
+Y29udGV4dF9zZXR0aW5nc5RdlIwVb3Jhbmdld2lkZ2V0LnNldHRpbmdzlIwHQ29udGV4dJSTlCmB
+lH2UKIwGdmFsdWVzlH2UKIwKYW5ub3RhdGlvbpSMEGZyYWN0X3Nob3J0ZW5pbmeUS2aGlIwIY29s
+b3JfYnmUTkr+////hpRoEUsCdYwKYXR0cmlidXRlc5R9lCiMCHN1cnZpdmFslEsCjAtzdGlsbF9h
+bGl2ZZRLAYwTYWdlX2F0X2hlYXJ0X2F0dGFja5RLAowRcGVyaWNhcmRfZWZmdXNpb26USwFoIEsC
+jARlcHNzlEsCjARsdmRklEsCjBF3YWxsX21vdGlvbl9zY29yZZRLAowRd2FsbF9tb3Rpb25faW5k
+ZXiUSwKMBG11bHSUSwKMCmFsaXZlX2F0XzGUSwF1jAVtZXRhc5R9lHViYXUu
+</properties>
+		<properties node_id="64" format="pickle">gASVWwMAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMC2F1dG9fc2FtcGxllIiMEmNvbnRyb2xBcmVh
+VmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAAEZAAAASQAABOgAAAM2
+AAABGgAAAGcAAATnAAADNQAAAAAAAAAABgAAAAEaAAAAZwAABOcAAAM1lIwJc2VsZWN0aW9ulE6M
+EXRvb2x0aXBfc2hvd3NfYWxslIiMD3Zpc3VhbF9zZXR0aW5nc5R9lIwFZ3JhcGiUfZQojAthbHBo
+YV92YWx1ZZRLgIwNY2xhc3NfZGVuc2l0eZSIjBFqaXR0ZXJfY29udGludW91c5SJjAtqaXR0ZXJf
+c2l6ZZRLCowTbGFiZWxfb25seV9zZWxlY3RlZJSIjBZvcnRob25vcm1hbF9yZWdyZXNzaW9ulImM
+C3BvaW50X3dpZHRolEsLjAlzaG93X2dyaWSUiYwLc2hvd19sZWdlbmSUiIwNc2hvd19yZWdfbGlu
+ZZSJdYwLX192ZXJzaW9uX1+USwWMEGNvbnRleHRfc2V0dGluZ3OUXZSMFW9yYW5nZXdpZGdldC5z
+ZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9lCiMBnZhbHVlc5R9lCiMCmF0dHJfY29sb3KUjAhzdXJ2
+aXZhbJRLZoaUjAphdHRyX2xhYmVslE5K/v///4aUjAphdHRyX3NoYXBllE5K/v///4aUjAlhdHRy
+X3NpemWUTkr+////hpSMBmF0dHJfeJRoIUtmhpSMBmF0dHJfeZSME2FnZV9hdF9oZWFydF9hdHRh
+Y2uUS2aGlGgKfZRoFksFdYwKYXR0cmlidXRlc5R9lCiMCHN1cnZpdmFslEsCjAtzdGlsbF9hbGl2
+ZZRLAYwTYWdlX2F0X2hlYXJ0X2F0dGFja5RLAowRcGVyaWNhcmRfZWZmdXNpb26USwGMEGZyYWN0
+X3Nob3J0ZW5pbmeUSwKMBGVwc3OUSwKMBGx2ZGSUSwKMEXdhbGxfbW90aW9uX3Njb3JllEsCjBF3
+YWxsX21vdGlvbl9pbmRleJRLAowEbXVsdJRLAowKYWxpdmVfYXRfMZRLAYwIU2VsZWN0ZWSUSwF1
+jAVtZXRhc5R9lHViYXUu
+</properties>
+		<properties node_id="65" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01o\x00\x00\x00r\x00\x00\x04\x90\x00\x00\x02\xd0\x00\x00\x01p\x00\x00\x00\x90\x00\x00\x04\x8f\x00\x00\x02\xcf\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01p\x00\x00\x00\x90\x00\x00\x04\x8f\x00\x00\x02\xcf', 'scriptLibrary': [{'name': 'New script', 'script': 'from sklearn.cluster import KMeans\nimport numpy as np\n\n# Assuming your data is stored in a numpy array \'data\'\n# Initialize the KMeans model with the desired number of clusters\nkmeans = KMeans(n_clusters=1)\n\n# Fit the KMeans model to your data\nkmeans.fit(data)\n\n# Get the cluster centers and labels\ncluster_centers = kmeans.cluster_centers_\nprint(cluster_centers)\nlabels = kmeans.labels_\n\n# Calculate the sum of squared errors (SSE)\nsse\nfor i in range(len(data)):\n    cluster_center = cluster_centers[labels[i]]\n    sse += np.linalg.norm(data[i] - cluster_center) ** 2\n\nprint("SSE:", sse)', 'filename': None}], 'scriptText': 'import numpy as np\nfrom sklearn.cluster import AgglomerativeClustering\nfrom sklearn.metrics import silhouette_score, davies_bouldin_score\n\n# Accessing data from Orange\'s input\ndata = np.array(in_data)  # \'in_data\' is the variable name representing the input data\n\n# Assuming \'data\' contains your dataset\n# Replace \'data\' with the actual variable name containing your data\n\n# Fit Hierarchical Clustering model\nn_clusters = 2  # Change the number of clusters as needed\nhierarchical_clustering = AgglomerativeClustering(n_clusters=n_clusters)\nlabels = hierarchical_clustering.fit_predict(data)\n\n# Compute Silhouette Score\nsilhouette_avg = silhouette_score(data, labels)\nprint("Silhouette Score:", silhouette_avg)\n\n# Compute Davies-Bouldin Index\ndavies_bouldin = davies_bouldin_score(data, labels)\nprint("Davies-Bouldin Index:", davies_bouldin)\n', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x9d\x00\x00\x00]\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+		<properties node_id="66" format="pickle">gASVwQMAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZl
+ZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAAFvAAAAgAAABJAAAAKSAAABcAAAAJ4AAASPAAAC
+kQAAAAAAAAAABgAAAAFwAAAAngAABI8AAAKRlIwLX192ZXJzaW9uX1+USwKMEGNvbnRleHRfc2V0
+dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1
+ZXOUfZRoBUsCc4wFc2hhcGWUS4RLhIaUjAlzeW1tZXRyaWOUiIwLYW5ub3RhdGlvbnOUXZQojARO
+b25llIwJRW51bWVyYXRllIwIc3Vydml2YWyUjAtzdGlsbF9hbGl2ZZSME2FnZV9hdF9oZWFydF9h
+dHRhY2uUjBFwZXJpY2FyZF9lZmZ1c2lvbpSMEGZyYWN0X3Nob3J0ZW5pbmeUjARlcHNzlIwEbHZk
+ZJSMEXdhbGxfbW90aW9uX3Njb3JllIwRd2FsbF9tb3Rpb25faW5kZXiUjARtdWx0lIwKYWxpdmVf
+YXRfMZRljAphbm5vdGF0aW9ulIwJRW51bWVyYXRllIwJc2VsZWN0aW9ulF2UdWJoCimBlH2UKGgN
+fZRoBUsCc2gPS3lLeYaUaBGIaBJdlCiMBE5vbmWUjAlFbnVtZXJhdGWUjAhzdXJ2aXZhbJSMC3N0
+aWxsX2FsaXZllIwTYWdlX2F0X2hlYXJ0X2F0dGFja5SMEXBlcmljYXJkX2VmZnVzaW9ulIwQZnJh
+Y3Rfc2hvcnRlbmluZ5SMBGVwc3OUjARsdmRklIwRd2FsbF9tb3Rpb25fc2NvcmWUjBF3YWxsX21v
+dGlvbl9pbmRleJSMBG11bHSUjAphbGl2ZV9hdF8xlGVoIYwJRW51bWVyYXRllGgjXZR1YmgKKYGU
+fZQoaA19lGgFSwJzaA9LOks6hpRoEYhoEl2UKIwETm9uZZSMCUVudW1lcmF0ZZSMCHN1cnZpdmFs
+lIwLc3RpbGxfYWxpdmWUjBNhZ2VfYXRfaGVhcnRfYXR0YWNrlIwRcGVyaWNhcmRfZWZmdXNpb26U
+jBBmcmFjdF9zaG9ydGVuaW5nlIwEZXBzc5SMBGx2ZGSUjBF3YWxsX21vdGlvbl9zY29yZZSMEXdh
+bGxfbW90aW9uX2luZGV4lIwEbXVsdJSMCmFsaXZlX2F0XzGUZWghjAlFbnVtZXJhdGWUaCNdlHVi
+ZXUu
+</properties>
+		<properties node_id="67" format="literal">{'autocommit': True, 'axis': 0, 'controlAreaVisible': True, 'metric_id': 1, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02p\x00\x00\x01\x0c\x00\x00\x03\x8f\x00\x00\x026\x00\x00\x02q\x00\x00\x01*\x00\x00\x03\x8e\x00\x00\x025\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x02q\x00\x00\x01*\x00\x00\x03\x8e\x00\x00\x025', '__version__': 4}</properties>
+		<properties node_id="68" format="pickle">gASVGwQAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZl
+ZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAAFvAAAAgAAABJAAAAKSAAABcAAAAJ4AAASPAAAC
+kQAAAAAAAAAABgAAAAFwAAAAngAABI8AAAKRlIwLX192ZXJzaW9uX1+USwKMEGNvbnRleHRfc2V0
+dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQuc2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1
+ZXOUfZRoBUsCc4wFc2hhcGWUS4RLhIaUjAlzeW1tZXRyaWOUiIwLYW5ub3RhdGlvbnOUXZQojARO
+b25llIwJRW51bWVyYXRllIwIc3Vydml2YWyUjAtzdGlsbF9hbGl2ZZSME2FnZV9hdF9oZWFydF9h
+dHRhY2uUjBFwZXJpY2FyZF9lZmZ1c2lvbpSMEGZyYWN0X3Nob3J0ZW5pbmeUjARlcHNzlIwEbHZk
+ZJSMEXdhbGxfbW90aW9uX3Njb3JllIwRd2FsbF9tb3Rpb25faW5kZXiUjARtdWx0lIwKYWxpdmVf
+YXRfMZRljAphbm5vdGF0aW9ulIwJRW51bWVyYXRllIwJc2VsZWN0aW9ulF2UdWJoCimBlH2UKGgN
+fZRoBUsCc2gPS3lLeYaUaBGIaBJdlCiMBE5vbmWUjAlFbnVtZXJhdGWUjAhzdXJ2aXZhbJSMC3N0
+aWxsX2FsaXZllIwTYWdlX2F0X2hlYXJ0X2F0dGFja5SMEXBlcmljYXJkX2VmZnVzaW9ulIwQZnJh
+Y3Rfc2hvcnRlbmluZ5SMBGVwc3OUjARsdmRklIwRd2FsbF9tb3Rpb25fc2NvcmWUjBF3YWxsX21v
+dGlvbl9pbmRleJSMBG11bHSUjAphbGl2ZV9hdF8xlGVoIYwJRW51bWVyYXRllGgjXZR1YmgKKYGU
+fZQoaA19lGgFSwJzaA9LOks6hpRoEYhoEl2UKIwETm9uZZSMCUVudW1lcmF0ZZSMCHN1cnZpdmFs
+lIwLc3RpbGxfYWxpdmWUjBNhZ2VfYXRfaGVhcnRfYXR0YWNrlIwRcGVyaWNhcmRfZWZmdXNpb26U
+jBBmcmFjdF9zaG9ydGVuaW5nlIwEZXBzc5SMBGx2ZGSUjBF3YWxsX21vdGlvbl9zY29yZZSMEXdh
+bGxfbW90aW9uX2luZGV4lIwEbXVsdJSMCmFsaXZlX2F0XzGUZWghjAlFbnVtZXJhdGWUaCNdlHVi
+aAopgZR9lChoDX2UaAVLAnNoD0uES4SGlGgRiGgSXZQoaCpoK2gsaC1oLmgvaDBoMWgyaDNoNGg1
+aDaMB091dGxpZXKUZWghjAlFbnVtZXJhdGWUaCNdlHViZXUu
+</properties>
+		<properties node_id="69" format="pickle">gASVXgQAAAAAAAB9lCiMF2Fubm90YXRpb25faWZfZW51bWVyYXRllIwLRW51bWVyYXRpb26UjBNh
+bm5vdGF0aW9uX2lmX25hbWVzlIwETmFtZZSMCmF1dG9jb21taXSUiIwSY29udHJvbEFyZWFWaXNp
+YmxllIiMCWN1dF9yYXRpb5RHQFLAAAAAAACMEWxhYmVsX29ubHlfc3Vic2V0lImMB2xpbmthZ2WU
+SwSMCW1heF9kZXB0aJRLCowHcHJ1bmluZ5RLAIwTc2F2ZWRXaWRnZXRHZW9tZXRyeZRDQgHZ0MsA
+AwAAAAABkgAAAIAAAARtAAACkgAAAZMAAACeAAAEbAAAApEAAAAAAAAAAAYAAAABkwAAAJ4AAARs
+AAACkZSMEHNlbGVjdGlvbl9tZXRob2SUSwCMBXRvcF9ulEsDjAt6b29tX2ZhY3RvcpRLAIwLX192
+ZXJzaW9uX1+USwKMFF9fc2Vzc2lvbl9zdGF0ZV9kYXRhlH2UjAd2ZXJzaW9ulEsASwBLAIeUc4wQ
+Y29udGV4dF9zZXR0aW5nc5RdlCiMFW9yYW5nZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5Qp
+gZR9lCiMBnZhbHVlc5R9lCiMCmFubm90YXRpb26UjBBmcmFjdF9zaG9ydGVuaW5nlEtmhpSMCGNv
+bG9yX2J5lIwIc3Vydml2YWyUS2aGlGgRSwJ1jAphdHRyaWJ1dGVzlH2UKIwIc3Vydml2YWyUSwKM
+C3N0aWxsX2FsaXZllEsBjBNhZ2VfYXRfaGVhcnRfYXR0YWNrlEsCjBFwZXJpY2FyZF9lZmZ1c2lv
+bpRLAYwQZnJhY3Rfc2hvcnRlbmluZ5RLAowEZXBzc5RLAowEbHZkZJRLAowRd2FsbF9tb3Rpb25f
+c2NvcmWUSwKMEXdhbGxfbW90aW9uX2luZGV4lEsCjARtdWx0lEsCjAphbGl2ZV9hdF8xlEsBdYwF
+bWV0YXOUfZR1YmgaKYGUfZQoaB19lCiMCmFubm90YXRpb26UjBBmcmFjdF9zaG9ydGVuaW5nlEtm
+hpSMCGNvbG9yX2J5lE5K/v///4aUaBFLAnVoJX2UKIwIc3Vydml2YWyUSwKMC3N0aWxsX2FsaXZl
+lEsBjBNhZ2VfYXRfaGVhcnRfYXR0YWNrlEsCjBFwZXJpY2FyZF9lZmZ1c2lvbpRLAWg4SwKMBGVw
+c3OUSwKMBGx2ZGSUSwKMEXdhbGxfbW90aW9uX3Njb3JllEsCjBF3YWxsX21vdGlvbl9pbmRleJRL
+AowEbXVsdJRLAowKYWxpdmVfYXRfMZRLAXVoMn2UjAdPdXRsaWVylEsBc3ViaBopgZR9lChoHX2U
+KIwKYW5ub3RhdGlvbpRoJ0tlhpSMCGNvbG9yX2J5lE5K/v///4aUaBFLAnVoJX2UKGgnSwFoKEsB
+aClLAWgqSwFoK0sBaCxLAWgtSwFoLksBaC9LAWgwSwFoMUsBdWgyfZR1YmV1Lg==
+</properties>
+		<properties node_id="70" format="pickle">gASVZQYAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMC2F1dG9fc2FtcGxllIiMEmNvbnRyb2xBcmVh
+VmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAAAAAIKAAAApAAABV0AAALc
+AAACCwAAAMIAAAVcAAAC2wAAAAAAAAAABgAAAAILAAAAwgAABVwAAALblIwJc2VsZWN0aW9ulE6M
+EXRvb2x0aXBfc2hvd3NfYWxslIiMD3Zpc3VhbF9zZXR0aW5nc5R9lIwFZ3JhcGiUfZQojAthbHBo
+YV92YWx1ZZRLaIwNY2xhc3NfZGVuc2l0eZSIjBFqaXR0ZXJfY29udGludW91c5SJjAtqaXR0ZXJf
+c2l6ZZRLCowTbGFiZWxfb25seV9zZWxlY3RlZJSJjBZvcnRob25vcm1hbF9yZWdyZXNzaW9ulImM
+C3BvaW50X3dpZHRolEsQjAlzaG93X2dyaWSUiYwLc2hvd19sZWdlbmSUiIwNc2hvd19yZWdfbGlu
+ZZSJdYwLX192ZXJzaW9uX1+USwWMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQu
+c2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojAphdHRyX2NvbG9ylIwHQ2x1
+c3RlcpRLZYaUjAphdHRyX2xhYmVslE5K/v///4aUjAphdHRyX3NoYXBllE5K/v///4aUjAlhdHRy
+X3NpemWUTkr+////hpSMBmF0dHJfeJRoIUtlhpSMBmF0dHJfeZRoIUtlhpRoCn2UaBZLBXWMCmF0
+dHJpYnV0ZXOUfZQojAhzdXJ2aXZhbJRLAowLc3RpbGxfYWxpdmWUSwGME2FnZV9hdF9oZWFydF9h
+dHRhY2uUSwKMEXBlcmljYXJkX2VmZnVzaW9ulEsBjBBmcmFjdF9zaG9ydGVuaW5nlEsCjARlcHNz
+lEsCjARsdmRklEsCjBF3YWxsX21vdGlvbl9zY29yZZRLAowRd2FsbF9tb3Rpb25faW5kZXiUSwKM
+BG11bHSUSwKMCmFsaXZlX2F0XzGUSwF1jAVtZXRhc5R9lCiMB0NsdXN0ZXKUSwGMClNpbGhvdWV0
+dGWUSwJ1dWJoGymBlH2UKGgefZQojAphdHRyX2NvbG9ylIwHQ2x1c3RlcpRLZYaUjAphdHRyX2xh
+YmVslE5K/v///4aUjAphdHRyX3NoYXBllE5K/v///4aUjAlhdHRyX3NpemWUTkr+////hpSMBmF0
+dHJfeJRoQ0tlhpSMBmF0dHJfeZRoQ0tlhpSMBWdyYXBolH2UaBZLBXVoLn2UKIwIc3Vydml2YWyU
+SwKMC3N0aWxsX2FsaXZllEsBjBNhZ2VfYXRfaGVhcnRfYXR0YWNrlEsCjBFwZXJpY2FyZF9lZmZ1
+c2lvbpRLAYwQZnJhY3Rfc2hvcnRlbmluZ5RLAowEZXBzc5RLAowEbHZkZJRLAowRd2FsbF9tb3Rp
+b25fc2NvcmWUSwKMEXdhbGxfbW90aW9uX2luZGV4lEsCjARtdWx0lEsCjAphbGl2ZV9hdF8xlEsB
+dWg7fZQojAdPdXRsaWVylEsBaENLAYwKU2lsaG91ZXR0ZZRLAnV1YmgbKYGUfZQoaB59lCiMCmF0
+dHJfY29sb3KUjAdDbHVzdGVylEtlhpSMCmF0dHJfbGFiZWyUTkr+////hpSMCmF0dHJfc2hhcGWU
+Tkr+////hpSMCWF0dHJfc2l6ZZROSv7///+GlIwGYXR0cl94lGhkS2WGlIwGYXR0cl95lGhkS2WG
+lIwFZ3JhcGiUfZRoFksFdWgufZQoaDBLAWgxSwFoMksBaDNLAWg0SwFoNUsBaDZLAWg3SwFoOEsB
+aDlLAWg6SwF1aDt9lChoPUsBaD5LAnV1YmgbKYGUfZQoaB59lCiMCmF0dHJfY29sb3KUaDFLZYaU
+jAphdHRyX2xhYmVslE5K/v///4aUjAphdHRyX3NoYXBllE5K/v///4aUjAlhdHRyX3NpemWUTkr+
+////hpSMBmF0dHJfeJRoMUtlhpSMBmF0dHJfeZRoNktlhpSMBWdyYXBolH2UaBZLBXVoLn2UKGgw
+SwFoMUsBaDJLAWgzSwFoNEsBaDVLAWg2SwFoN0sBaDhLAWg5SwFoOksBdWg7fZR1YmV1Lg==
+</properties>
+		<properties node_id="71" format="literal">{'auto_commit': True, 'controlAreaVisible': True, 'k': 5, 'k_from': 2, 'k_to': 13, 'max_iterations': 100, 'n_init': 15, 'normalize': True, 'optimize_k': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\x91\x00\x00\x00\xa8\x00\x00\x03Q\x00\x00\x01\xd7\x00\x00\x01\x92\x00\x00\x00\xc6\x00\x00\x03P\x00\x00\x01\xd6\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01\x92\x00\x00\x00\xc6\x00\x00\x03P\x00\x00\x01\xd6', 'selection': 0, 'smart_init': 0, '__version__': 2}</properties>
+		<properties node_id="72" format="pickle">gASVSQUAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMC2F1dG9fc2FtcGxllIiMEmNvbnRyb2xBcmVh
+VmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAD/////////+QAABgAAAANg
+AAAAAAAAABcAAAX/AAADXwAAAAACAAAABgAAAAAAAAAAFwAABf8AAANflIwJc2VsZWN0aW9ulE6M
+EXRvb2x0aXBfc2hvd3NfYWxslIiMD3Zpc3VhbF9zZXR0aW5nc5R9lIwFZ3JhcGiUfZQojAthbHBo
+YV92YWx1ZZRLgIwNY2xhc3NfZGVuc2l0eZSIjBFqaXR0ZXJfY29udGludW91c5SJjAtqaXR0ZXJf
+c2l6ZZRLCowTbGFiZWxfb25seV9zZWxlY3RlZJSIjBZvcnRob25vcm1hbF9yZWdyZXNzaW9ulImM
+C3BvaW50X3dpZHRolEsHjAlzaG93X2dyaWSUiIwLc2hvd19sZWdlbmSUiIwNc2hvd19yZWdfbGlu
+ZZSJdYwLX192ZXJzaW9uX1+USwWMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQu
+c2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojAphdHRyX2NvbG9ylIwIc3Vy
+dml2YWyUS2aGlIwKYXR0cl9sYWJlbJROSv7///+GlIwKYXR0cl9zaGFwZZROSv7///+GlIwJYXR0
+cl9zaXpllE5K/v///4aUjAZhdHRyX3iUaCFLZoaUjAZhdHRyX3mUjBNhZ2VfYXRfaGVhcnRfYXR0
+YWNrlEtmhpRoCn2UaBZLBXWMCmF0dHJpYnV0ZXOUfZQojAhzdXJ2aXZhbJRLAowLc3RpbGxfYWxp
+dmWUSwGME2FnZV9hdF9oZWFydF9hdHRhY2uUSwKMEXBlcmljYXJkX2VmZnVzaW9ulEsBjBBmcmFj
+dF9zaG9ydGVuaW5nlEsCjARlcHNzlEsCjARsdmRklEsCjBF3YWxsX21vdGlvbl9zY29yZZRLAowR
+d2FsbF9tb3Rpb25faW5kZXiUSwKMBG11bHSUSwKMCmFsaXZlX2F0XzGUSwGMCFNlbGVjdGVklEsB
+dYwFbWV0YXOUfZR1YmgbKYGUfZQoaB59lChoIGghS2aGlGgjTkr+////hpRoJU5K/v///4aUaCdO
+Sv7///+GlGgpaCFLZoaUaCtoLEtmhpRoCn2UaBZLBXVoL32UKGghSwKMC3N0aWxsX2FsaXZllEsB
+aCxLAowRcGVyaWNhcmRfZWZmdXNpb26USwGMEGZyYWN0X3Nob3J0ZW5pbmeUSwKMBGVwc3OUSwKM
+BGx2ZGSUSwKMEXdhbGxfbW90aW9uX3Njb3JllEsCjBF3YWxsX21vdGlvbl9pbmRleJRLAowEbXVs
+dJRLAowKYWxpdmVfYXRfMZRLAYwIU2VsZWN0ZWSUSwF1aD19lIwHT3V0bGllcpRLAXN1YmgbKYGU
+fZQoaB59lCiMCmF0dHJfY29sb3KUjAhzdXJ2aXZhbJRLZYaUjAphdHRyX2xhYmVslE5K/v///4aU
+jAphdHRyX3NoYXBllE5K/v///4aUjAlhdHRyX3NpemWUTkr+////hpSMBmF0dHJfeJRoWktlhpSM
+BmF0dHJfeZSMEXdhbGxfbW90aW9uX2luZGV4lEtlhpSMBWdyYXBolH2UaBZLBXVoL32UKGgxSwFo
+MksBaDNLAWg0SwFoNUsBaDZLAWg3SwFoOEsBaDlLAWg6SwFoO0sBaDxLAXVoPX2UdWJldS4=
+</properties>
+		<properties node_id="73" format="pickle">gASVpAIAAAAAAAB9lCiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5
+lENCAdnQywADAAD/////////+QAABgAAAANgAAAAAAAAABcAAAX/AAADLwAAAAACAAAABgAAAAAA
+AAAAFwAABf8AAANflIwJc2VsZWN0aW9ulF2UjAtzaG93X3Njb3Jlc5SIjAtzY29yZV90YWJsZZR9
+lIwQc2hvd19zY29yZV9oaW50c5R9lCiMBk1vZGVsX5SIjAZUcmFpbl+UiYwFVGVzdF+UiYwCQ0GU
+iIwXUHJlY2lzaW9uUmVjYWxsRlN1cHBvcnSUiIwLVGFyZ2V0U2NvcmWUiIwJUHJlY2lzaW9ulIiM
+BlJlY2FsbJSIjAJGMZSIjANBVUOUiIwHTG9nTG9zc5SJjAtTcGVjaWZpY2l0eZSJjBdNYXR0aGV3
+c0NvcnJDb2VmZmljaWVudJSIjANNU0WUiIwEUk1TRZSIjANNQUWUiIwETUFQRZSIjAJSMpSIjAZD
+VlJNU0WUiYwPQ2x1c3RlcmluZ1Njb3JllIiMClNpbGhvdWV0dGWUiIwXQWRqdXN0ZWRNdXR1YWxJ
+bmZvU2NvcmWUiHVzjAtfX3ZlcnNpb25fX5RLAowQY29udGV4dF9zZXR0aW5nc5RdlIwVb3Jhbmdl
+d2lkZ2V0LnNldHRpbmdzlIwHQ29udGV4dJSTlCmBlH2UKIwGdmFsdWVzlH2UKIwXc2hvd19wcm9i
+YWJpbGl0eV9lcnJvcnOUiIwPc2hvd19yZWdfZXJyb3JzlEsBjAtzaG93bl9wcm9ic5RLAIwMdGFy
+Z2V0X2NsYXNzlIwWKEF2ZXJhZ2Ugb3ZlciBjbGFzc2VzKZRoB32UaCFLAnWMB2NsYXNzZXOUKXVi
+YXUu
+</properties>
+		<properties node_id="74" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00\xdd\x00\x00\x00o\x00\x00\x04T\x00\x00\x02\xcd\x00\x00\x00\xde\x00\x00\x00\x8d\x00\x00\x04S\x00\x00\x02\xcc\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x00\xde\x00\x00\x00\x8d\x00\x00\x04S\x00\x00\x02\xcc', 'scriptLibrary': [{'name': 'Table from numpy', 'script': 'from sklearn.cluster import KMeans\nimport numpy as np\n\ndata = np.array(in_data)\n# Assuming your data is stored in a numpy array \'data\'\n# Initialize the KMeans model with the desired number of clusters\nkmeans = KMeans(n_clusters=1)\n\n# Fit the KMeans model to your data\nkmeans.fit(data)\n\n# Get the cluster centers and labels\ncluster_centers = kmeans.cluster_centers_\nprint(cluster_centers)\nlabels = kmeans.labels_\n\n# Calculate the sum of squared errors (SSE)\nsse\nfor i in range(len(data)):\n    cluster_center = cluster_centers[labels[i]]\n    sse += np.linalg.norm(data[i] - cluster_center) ** 2\n\nprint("SSE:", sse)', 'filename': None}], 'scriptText': 'import numpy as np\nfrom sklearn.cluster import AgglomerativeClustering\nfrom sklearn.metrics import silhouette_score, davies_bouldin_score\n\n# Accessing data from Orange\'s input\ndata = np.array(in_data)  # \'in_data\' is the variable name representing the input data\n\n# Assuming \'data\' contains your dataset\n# Replace \'data\' with the actual variable name containing your data\n\n# Fit Hierarchical Clustering model\nn_clusters = 2  # Change the number of clusters as needed\nhierarchical_clustering = AgglomerativeClustering(n_clusters=n_clusters)\nlabels = hierarchical_clustering.fit_predict(data)\n\n# Compute Silhouette Score\nsilhouette_avg = silhouette_score(data, labels)\nprint("Silhouette Score:", silhouette_avg)\n\n# Compute Davies-Bouldin Index\ndavies_bouldin = davies_bouldin_score(data, labels)\nprint("Davies-Bouldin Index:", davies_bouldin)\n', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x9d\x00\x00\x00]\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+		<properties node_id="75" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01o\x00\x00\x00r\x00\x00\x04\x90\x00\x00\x02\xd0\x00\x00\x01p\x00\x00\x00\x90\x00\x00\x04\x8f\x00\x00\x02\xcf\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01p\x00\x00\x00\x90\x00\x00\x04\x8f\x00\x00\x02\xcf', 'scriptLibrary': [{'name': 'New script', 'script': 'import numpy as np\n\n# Function to calculate Euclidean distance\ndef euclidean_distance(point1, point2):\n    return np.sqrt(np.sum((point1 - point2) ** 2))\n\n# Function to calculate sum of squared error distance\ndef sum_of_squared_error(data, centroids):\n    sse = 0\n    for i, point in enumerate(data):\n        centroid = centroids[i]\n        sse += euclidean_distance(point, centroid) ** 2\n    return sse\n\n# Convert the dataset to a numpy array\ndata = np.array([\n    [1, 3, 1, 1, 2, 1, 2, 0, 0, 0],\n    # Add more data points here...\n])\n\n# Example centroids\ncentroids = np.array([\n    [1, 2, 1, 1, 2, 1, 2, 0, 0, 0],\n    # Add more centroids here...\n])\n\n\n# Calculate the sum of squared error distance\nsse = sum_of_squared_error(data, centroids)\nprint("Sum of Squared Error Distance:", sse)', 'filename': None}], 'scriptText': 'import numpy as np\nfrom sklearn.cluster import KMeans\nfrom sklearn.metrics import silhouette_score, davies_bouldin_score\n\n# Accessing data from Orange\'s input\ndata = np.array(in_data)  # \'in_data\' is the variable name representing the input data\n\n# Assuming \'data\' contains your dataset\n# Replace \'data\' with the actual variable name containing your data\n\n# Fit K-Means clustering model\nkmeans = KMeans(n_clusters=3)  # Change the number of clusters as needed\nkmeans.fit(data)\n\n# Get cluster labels\nlabels = kmeans.labels_\n\n# Compute Silhouette Score\nsilhouette_avg = silhouette_score(data, labels)\nprint("Silhouette Score:", silhouette_avg)\n\n# Compute Davies-Bouldin Index\ndavies_bouldin = davies_bouldin_score(data, labels)\nprint("Davies-Bouldin Index:", davies_bouldin)\n', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x9d\x00\x00\x00]\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+		<properties node_id="76" format="pickle">gASV6gAAAAAAAAB9lCiMCGF1dG9zZW5klIiMEmNvbnRyb2xBcmVhVmlzaWJsZZSIjBNzYXZlZFdp
+ZGdldEdlb21ldHJ5lENCAdnQywADAAAAAAHVAAAAgAAABCoAAAKSAAAB1gAAAJ4AAAQpAAACkQAA
+AAAAAAAABgAAAAHWAAAAngAABCkAAAKRlIwJdmFyX2hpbnRzlH2UTowgT3JhbmdlLndpZGdldHMu
+ZGF0YS5vd2Rpc2NyZXRpemWUjAdWYXJIaW50lJOUaAeMB01ldGhvZHOUk5RLAYWUUpQphpSBlHOM
+C19fdmVyc2lvbl9flEsDdS4=
+</properties>
+		<properties node_id="77" format="literal">{'autocommit': True, 'axis': 0, 'controlAreaVisible': True, 'metric_id': 2, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x02p\x00\x00\x01\x0c\x00\x00\x03\x8f\x00\x00\x026\x00\x00\x02q\x00\x00\x01*\x00\x00\x03\x8e\x00\x00\x025\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x02q\x00\x00\x01*\x00\x00\x03\x8e\x00\x00\x025', '__version__': 4}</properties>
+		<properties node_id="78" format="pickle">gASVMgQAAAAAAAB9lCiMF2Fubm90YXRpb25faWZfZW51bWVyYXRllIwLRW51bWVyYXRpb26UjBNh
+bm5vdGF0aW9uX2lmX25hbWVzlIwETmFtZZSMCmF1dG9jb21taXSUiIwSY29udHJvbEFyZWFWaXNp
+YmxllIiMCWN1dF9yYXRpb5RHQFLAAAAAAACMEWxhYmVsX29ubHlfc3Vic2V0lImMB2xpbmthZ2WU
+SwSMCW1heF9kZXB0aJRLCowHcHJ1bmluZ5RLAIwTc2F2ZWRXaWRnZXRHZW9tZXRyeZRDQgHZ0MsA
+AwAAAAABkgAAAIAAAARtAAACkgAAAZMAAACeAAAEbAAAApEAAAAAAAAAAAYAAAABkwAAAJ4AAARs
+AAACkZSMEHNlbGVjdGlvbl9tZXRob2SUSwCMBXRvcF9ulEsDjAt6b29tX2ZhY3RvcpRLAIwLX192
+ZXJzaW9uX1+USwKMFF9fc2Vzc2lvbl9zdGF0ZV9kYXRhlH2UjAd2ZXJzaW9ulEsASwBLAIeUc4wQ
+Y29udGV4dF9zZXR0aW5nc5RdlCiMFW9yYW5nZXdpZGdldC5zZXR0aW5nc5SMB0NvbnRleHSUk5Qp
+gZR9lCiMBnZhbHVlc5R9lCiMCmFubm90YXRpb26UjAphbGl2ZV9hdF8xlEtlhpSMCGNvbG9yX2J5
+lE5K/v///4aUaBFLAnWMCmF0dHJpYnV0ZXOUfZQojAhzdXJ2aXZhbJRLAowLc3RpbGxfYWxpdmWU
+SwGME2FnZV9hdF9oZWFydF9hdHRhY2uUSwKMEXBlcmljYXJkX2VmZnVzaW9ulEsBjBBmcmFjdF9z
+aG9ydGVuaW5nlEsCjARlcHNzlEsCjARsdmRklEsCjBF3YWxsX21vdGlvbl9zY29yZZRLAowRd2Fs
+bF9tb3Rpb25faW5kZXiUSwKMBG11bHSUSwJoIEsBjAhTZWxlY3RlZJRLAXWMBW1ldGFzlH2UdWJo
+GimBlH2UKGgdfZQojAphbm5vdGF0aW9ulIwKYWxpdmVfYXRfMZRLZYaUjAhjb2xvcl9ieZROSv7/
+//+GlGgRSwJ1aCR9lCiMCHN1cnZpdmFslEsBjAtzdGlsbF9hbGl2ZZRLAYwTYWdlX2F0X2hlYXJ0
+X2F0dGFja5RLAYwRcGVyaWNhcmRfZWZmdXNpb26USwGMEGZyYWN0X3Nob3J0ZW5pbmeUSwGMBGVw
+c3OUSwGMBGx2ZGSUSwGMEXdhbGxfbW90aW9uX3Njb3JllEsBjBF3YWxsX21vdGlvbl9pbmRleJRL
+AYwEbXVsdJRLAWg3SwF1aDF9lHViaBopgZR9lChoHX2UKGg2aEBLZoaUaDlOSv7///+GlGgRSwJ1
+aCR9lChoPEsCaD1LAWg+SwJoP0sBaEBLAmhBSwJoQksCaENLAmhESwJoRUsCaDdLAXVoMX2UdWJl
+dS4=
+</properties>
+		<properties node_id="79" format="pickle">gASVvgQAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMC2F1dG9fc2FtcGxllIiMEmNvbnRyb2xBcmVh
+VmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAD/////////+QAABgAAAANg
+AAAAAAAAABcAAAX/AAADXwAAAAACAAAABgAAAAAAAAAAFwAABf8AAANflIwJc2VsZWN0aW9ulE6M
+EXRvb2x0aXBfc2hvd3NfYWxslIiMD3Zpc3VhbF9zZXR0aW5nc5R9lIwFZ3JhcGiUfZQojAthbHBo
+YV92YWx1ZZRLgIwNY2xhc3NfZGVuc2l0eZSIjBFqaXR0ZXJfY29udGludW91c5SJjAtqaXR0ZXJf
+c2l6ZZRLCowTbGFiZWxfb25seV9zZWxlY3RlZJSIjBZvcnRob25vcm1hbF9yZWdyZXNzaW9ulImM
+C3BvaW50X3dpZHRolEsLjAlzaG93X2dyaWSUiYwLc2hvd19sZWdlbmSUiIwNc2hvd19yZWdfbGlu
+ZZSJdYwLX192ZXJzaW9uX1+USwWMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQu
+c2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojAphdHRyX2NvbG9ylIwIc3Vy
+dml2YWyUS2aGlIwKYXR0cl9sYWJlbJROSv7///+GlIwKYXR0cl9zaGFwZZROSv7///+GlIwJYXR0
+cl9zaXpllE5K/v///4aUjAZhdHRyX3iUaCFLZoaUjAZhdHRyX3mUjBNhZ2VfYXRfaGVhcnRfYXR0
+YWNrlEtmhpRoCn2UaBZLBXWMCmF0dHJpYnV0ZXOUfZQoaCFLAowLc3RpbGxfYWxpdmWUSwFoLEsC
+jBFwZXJpY2FyZF9lZmZ1c2lvbpRLAYwQZnJhY3Rfc2hvcnRlbmluZ5RLAowEZXBzc5RLAowEbHZk
+ZJRLAowRd2FsbF9tb3Rpb25fc2NvcmWUSwKMEXdhbGxfbW90aW9uX2luZGV4lEsCjARtdWx0lEsC
+jAphbGl2ZV9hdF8xlEsBjAhTZWxlY3RlZJRLAXWMBW1ldGFzlH2UjAxTZWxlY3RlZCAoMSmUSwFz
+dWJoGymBlH2UKGgefZQojAphdHRyX2NvbG9ylIwLc3RpbGxfYWxpdmWUS2WGlIwKYXR0cl9sYWJl
+bJRoQktlhpSMCmF0dHJfc2hhcGWUTkr+////hpSMCWF0dHJfc2l6ZZROSv7///+GlIwGYXR0cl94
+lIwIc3Vydml2YWyUS2WGlIwGYXR0cl95lGhLS2WGlIwFZ3JhcGiUfZRoFksFdWgvfZQojAhzdXJ2
+aXZhbJRLAYwLc3RpbGxfYWxpdmWUSwGME2FnZV9hdF9oZWFydF9hdHRhY2uUSwGMEXBlcmljYXJk
+X2VmZnVzaW9ulEsBjBBmcmFjdF9zaG9ydGVuaW5nlEsBjARlcHNzlEsBjARsdmRklEsBjBF3YWxs
+X21vdGlvbl9zY29yZZRLAYwRd2FsbF9tb3Rpb25faW5kZXiUSwGMBG11bHSUSwGMCmFsaXZlX2F0
+XzGUSwGMCFNlbGVjdGVklEsBdWg7fZR1YmV1Lg==
+</properties>
+		<properties node_id="80" format="literal">{'auto_commit': True, 'controlAreaVisible': True, 'k': 3, 'k_from': 2, 'k_to': 8, 'max_iterations': 100, 'n_init': 15, 'normalize': True, 'optimize_k': False, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01\x91\x00\x00\x00\xa8\x00\x00\x03U\x00\x00\x01\xd7\x00\x00\x01\x92\x00\x00\x00\xc6\x00\x00\x03T\x00\x00\x01\xd6\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01\x92\x00\x00\x00\xc6\x00\x00\x03T\x00\x00\x01\xd6', 'selection': None, 'smart_init': 0, '__version__': 2}</properties>
+		<properties node_id="81" format="pickle">gASV2QQAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMC2F1dG9fc2FtcGxllIiMEmNvbnRyb2xBcmVh
+VmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAD/////////+QAABgAAAANg
+AAAAAAAAABcAAAX/AAADXwAAAAACAAAABgAAAAAAAAAAFwAABf8AAANflIwJc2VsZWN0aW9ulE6M
+EXRvb2x0aXBfc2hvd3NfYWxslIiMD3Zpc3VhbF9zZXR0aW5nc5R9lIwFZ3JhcGiUfZQojAthbHBo
+YV92YWx1ZZRLgIwNY2xhc3NfZGVuc2l0eZSIjBFqaXR0ZXJfY29udGludW91c5SJjAtqaXR0ZXJf
+c2l6ZZRLCowTbGFiZWxfb25seV9zZWxlY3RlZJSIjBZvcnRob25vcm1hbF9yZWdyZXNzaW9ulImM
+C3BvaW50X3dpZHRolEsLjAlzaG93X2dyaWSUiYwLc2hvd19sZWdlbmSUiIwNc2hvd19yZWdfbGlu
+ZZSJdYwLX192ZXJzaW9uX1+USwWMEGNvbnRleHRfc2V0dGluZ3OUXZQojBVvcmFuZ2V3aWRnZXQu
+c2V0dGluZ3OUjAdDb250ZXh0lJOUKYGUfZQojAZ2YWx1ZXOUfZQojAphdHRyX2NvbG9ylIwKYWxp
+dmVfYXRfMZRLZYaUjAphdHRyX2xhYmVslE5K/v///4aUjAphdHRyX3NoYXBllE5K/v///4aUjAlh
+dHRyX3NpemWUTkr+////hpSMBmF0dHJfeJSMB0NsdXN0ZXKUS2WGlIwGYXR0cl95lGgqS2WGlGgK
+fZRoFksFdYwKYXR0cmlidXRlc5R9lCiMCHN1cnZpdmFslEsCjAtzdGlsbF9hbGl2ZZRLAYwTYWdl
+X2F0X2hlYXJ0X2F0dGFja5RLAowRcGVyaWNhcmRfZWZmdXNpb26USwGMEGZyYWN0X3Nob3J0ZW5p
+bmeUSwKMBGVwc3OUSwKMBGx2ZGSUSwKMEXdhbGxfbW90aW9uX3Njb3JllEsCjBF3YWxsX21vdGlv
+bl9pbmRleJRLAowEbXVsdJRLAmghSwGMCFNlbGVjdGVklEsBdYwFbWV0YXOUfZQoaCpLAYwKU2ls
+aG91ZXR0ZZRLAnV1YmgbKYGUfZQoaB59lCiMCmF0dHJfY29sb3KUjAphbGl2ZV9hdF8xlEtlhpSM
+CmF0dHJfbGFiZWyUTkr+////hpSMCmF0dHJfc2hhcGWUTkr+////hpSMCWF0dHJfc2l6ZZROSv7/
+//+GlIwGYXR0cl94lIwHQ2x1c3RlcpRLZYaUjAZhdHRyX3mUaExLZYaUjAVncmFwaJR9lGgWSwV1
+aC99lCiMCHN1cnZpdmFslEsBjAtzdGlsbF9hbGl2ZZRLAYwTYWdlX2F0X2hlYXJ0X2F0dGFja5RL
+AYwRcGVyaWNhcmRfZWZmdXNpb26USwGMEGZyYWN0X3Nob3J0ZW5pbmeUSwGMBGVwc3OUSwGMBGx2
+ZGSUSwGMEXdhbGxfbW90aW9uX3Njb3JllEsBjBF3YWxsX21vdGlvbl9pbmRleJRLAYwEbXVsdJRL
+AYwKYWxpdmVfYXRfMZRLAXVoPH2UKIwHQ2x1c3RlcpRLAYwKU2lsaG91ZXR0ZZRLAnV1YmV1Lg==
+</properties>
+		<properties node_id="82" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01o\x00\x00\x00r\x00\x00\x04\x90\x00\x00\x02\xd0\x00\x00\x01p\x00\x00\x00\x90\x00\x00\x04\x8f\x00\x00\x02\xcf\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01p\x00\x00\x00\x90\x00\x00\x04\x8f\x00\x00\x02\xcf', 'scriptLibrary': [{'name': 'New script', 'script': 'from sklearn.cluster import KMeans\nimport numpy as np\n\n# Assuming your data is stored in a numpy array \'data\'\n# Initialize the KMeans model with the desired number of clusters\nkmeans = KMeans(n_clusters=1)\n\n# Fit the KMeans model to your data\nkmeans.fit(data)\n\n# Get the cluster centers and labels\ncluster_centers = kmeans.cluster_centers_\nprint(cluster_centers)\nlabels = kmeans.labels_\n\n# Calculate the sum of squared errors (SSE)\nsse\nfor i in range(len(data)):\n    cluster_center = cluster_centers[labels[i]]\n    sse += np.linalg.norm(data[i] - cluster_center) ** 2\n\nprint("SSE:", sse)', 'filename': None}], 'scriptText': 'import numpy as np\nfrom sklearn.cluster import AgglomerativeClustering\nfrom sklearn.metrics import silhouette_score, davies_bouldin_score\n\n# Accessing data from Orange\'s input\ndata = np.array(in_data)  # \'in_data\' is the variable name representing the input data\n\n# Assuming \'data\' contains your dataset\n# Replace \'data\' with the actual variable name containing your data\n\n# Fit Hierarchical Clustering model\nn_clusters = 2  # Change the number of clusters as needed\nhierarchical_clustering = AgglomerativeClustering(n_clusters=n_clusters)\nlabels = hierarchical_clustering.fit_predict(data)\n\n# Compute Silhouette Score\nsilhouette_avg = silhouette_score(data, labels)\nprint("Silhouette Score:", silhouette_avg)\n\n# Compute Davies-Bouldin Index\ndavies_bouldin = davies_bouldin_score(data, labels)\nprint("Davies-Bouldin Index:", davies_bouldin)\n', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x9d\x00\x00\x00]\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+		<properties node_id="83" format="literal">{'controlAreaVisible': True, 'currentScriptIndex': 0, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x01o\x00\x00\x00r\x00\x00\x04\x90\x00\x00\x02\xd0\x00\x00\x01p\x00\x00\x00\x90\x00\x00\x04\x8f\x00\x00\x02\xcf\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x01p\x00\x00\x00\x90\x00\x00\x04\x8f\x00\x00\x02\xcf', 'scriptLibrary': [{'name': 'New script', 'script': 'from sklearn.cluster import KMeans\nimport numpy as np\n\n# Assuming your data is stored in a numpy array \'data\'\n# Initialize the KMeans model with the desired number of clusters\nkmeans = KMeans(n_clusters=1)\n\n# Fit the KMeans model to your data\nkmeans.fit(data)\n\n# Get the cluster centers and labels\ncluster_centers = kmeans.cluster_centers_\nprint(cluster_centers)\nlabels = kmeans.labels_\n\n# Calculate the sum of squared errors (SSE)\nsse\nfor i in range(len(data)):\n    cluster_center = cluster_centers[labels[i]]\n    sse += np.linalg.norm(data[i] - cluster_center) ** 2\n\nprint("SSE:", sse)', 'filename': None}], 'scriptText': 'from sklearn.cluster import KMeans\nimport numpy as np\n\n# Assuming your data is stored in a numpy array \'data\'\n# Initialize the KMeans model with the desired number of clusters\nkmeans = KMeans(n_clusters=1)\n\n# Fit the KMeans model to your data\nkmeans.fit(data)\n\n# Get the cluster centers and labels\ncluster_centers = kmeans.cluster_centers_\nprint(cluster_centers)\nlabels = kmeans.labels_\n\n# Calculate the sum of squared errors (SSE)\nsse\nfor i in range(len(data)):\n    cluster_center = cluster_centers[labels[i]]\n    sse += np.linalg.norm(data[i] - cluster_center) ** 2\n\nprint("SSE:", sse)', 'splitterState': b'\x00\x00\x00\xff\x00\x00\x00\x01\x00\x00\x00\x02\x00\x00\x00\x9d\x00\x00\x00]\x01\xff\xff\xff\xff\x01\x00\x00\x00\x02\x00', 'vimModeEnabled': False, '__version__': 2}</properties>
+		<properties node_id="84" format="literal">{'auto_commit': True, 'color_by_class': True, 'controlAreaVisible': True, 'savedWidgetGeometry': b'\x01\xd9\xd0\xcb\x00\x03\x00\x00\x00\x00\x00\x01\x00\x00\x00\x10\x00\x00\x06\x00\x00\x00\x03o\x00\x00\x00\x02\x00\x00\x00.\x00\x00\x05\xff\x00\x00\x03n\x00\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00\x00\x02\x00\x00\x00.\x00\x00\x05\xff\x00\x00\x03n', 'select_rows': True, 'show_attribute_labels': True, 'show_distributions': False, 'stored_selection': {'rows': [], 'columns': []}, 'stored_sort': [], '__version__': 1}</properties>
+		<properties node_id="85" format="pickle">gASVPgMAAAAAAAB9lCiMC2F1dG9fY29tbWl0lIiMC2F1dG9fc2FtcGxllIiMEmNvbnRyb2xBcmVh
+VmlzaWJsZZSIjBNzYXZlZFdpZGdldEdlb21ldHJ5lENCAdnQywADAAD/////////+QAABgAAAANg
+AAAAAAAAABcAAAX/AAADXwAAAAACAAAABgAAAAAAAAAAFwAABf8AAANflIwJc2VsZWN0aW9ulE6M
+EXRvb2x0aXBfc2hvd3NfYWxslIiMD3Zpc3VhbF9zZXR0aW5nc5R9lIwFZ3JhcGiUfZQojAthbHBo
+YV92YWx1ZZRLgIwNY2xhc3NfZGVuc2l0eZSIjBFqaXR0ZXJfY29udGludW91c5SJjAtqaXR0ZXJf
+c2l6ZZRLCowTbGFiZWxfb25seV9zZWxlY3RlZJSIjBZvcnRob25vcm1hbF9yZWdyZXNzaW9ulImM
+C3BvaW50X3dpZHRolEsLjAlzaG93X2dyaWSUiYwLc2hvd19sZWdlbmSUiIwNc2hvd19yZWdfbGlu
+ZZSJdYwLX192ZXJzaW9uX1+USwWMEGNvbnRleHRfc2V0dGluZ3OUXZSMFW9yYW5nZXdpZGdldC5z
+ZXR0aW5nc5SMB0NvbnRleHSUk5QpgZR9lCiMBnZhbHVlc5R9lCiMCmF0dHJfY29sb3KUjAhzdXJ2
+aXZhbJRLZoaUjAphdHRyX2xhYmVslE5K/v///4aUjAphdHRyX3NoYXBllE5K/v///4aUjAlhdHRy
+X3NpemWUTkr+////hpSMBmF0dHJfeJRoIUtmhpSMBmF0dHJfeZSME2FnZV9hdF9oZWFydF9hdHRh
+Y2uUS2aGlGgKfZRoFksFdYwKYXR0cmlidXRlc5R9lChoIUsCjAtzdGlsbF9hbGl2ZZRLAWgsSwKM
+EXBlcmljYXJkX2VmZnVzaW9ulEsBjBBmcmFjdF9zaG9ydGVuaW5nlEsCjARlcHNzlEsCjARsdmRk
+lEsCjBF3YWxsX21vdGlvbl9zY29yZZRLAowRd2FsbF9tb3Rpb25faW5kZXiUSwKMBG11bHSUSwKM
+CmFsaXZlX2F0XzGUSwGMCFNlbGVjdGVklEsBdYwFbWV0YXOUfZR1YmF1Lg==
+</properties>
+	</node_properties>
+	<session_state>
+		<window_groups />
+	</session_state>
+</scheme>
